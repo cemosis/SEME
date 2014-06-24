@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+
+\usepackage{amssymb,amsmath,exscale}
+\usepackage[utf8]{inputenc}
+
+% \usepackage[]{authblk}
+\usepackage{palatino}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsbsy}
+% \usepackage{psfrag}
+%\usepackage{float} 
+\usepackage{color}
+\usepackage[english]{babel}
+%%\usepackage[latin1]{inputenc}
+%\usepackage[applemac]{fontenc}
+\usepackage{float} 
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subfigure}
+\usepackage{marenewcommand}
+%\usepackage[french]{babel}
+\author{}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+\topmargin -1cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\textwidth 16.5cm
+\textheight 23.5cm
+
+\def\theequation{\thesection.\arabic{equation}}
+
+\newtheorem{remark}{Remark}[section]
+\def\begrem{\begin{remark}\rm}
+\def\endrem{\null\hfill\blackbox\end{remark}}
+
+\newtheorem{prop}{Proposition}[section] 
+
+\def\NN{{\rm I\hspace{-0.50ex}N} }
+\def\RR{{\rm I\hspace{-0.50ex}R} }
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\let\pa\partial
+\def \intdb{\int\!\!\!\!\int}
+
+\title{Test BGK mail 20 fév.} 
+\date{}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+% \includeonly{MicroMacro}
+% \usepackage{setspace}
+
+% 
+\usepackage{nicefrac}
+\definecolor{gris}{gray}{.99}
+\usepackage{listings}
+\lstset{ %
+language=[90]Fortran,                % the language of the code
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+numbers=none,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=2,                   % the step between two line-numbers. If it's 1, each line 
+                                % will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+backgroundcolor=\color{gris},  % choose the background color. You must add
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,                   % adds a frame around the code
+tabsize=2,                      % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+title=\lstname,                 % show the filename of files included with \lstinputlisting;
+frameround={tttt},                                % also try caption instead of title
+escapeinside={\%*}{*)},         % if you want to add a comment within your code
+morekeywords={*,...}            % if you want to add more keywords to the set
+}
+\begin{document}
+\section{Asumptions}
+\[
+R_{inflow} \ll R_{outflow}
+\]
+\[
+p_{chamber} = p
+\]
+\[
+IOP < P_{chamber}
+\]
+
+\section{model}
+%\[
+%\frac{\dd V}{\dd t} = L_{p} \left( (p_{a} -p) _ \sigma_{p} \Delta \Pi_{p} - \sigma_{s} \rho (C_{1}- C_{2}) \right) - \frac{p - p_{e} }{R}
+%\]
+\[
+f(v,p) = 0
+\]
+\[
+V^\star \frac{\dd C_2}{\dd t} = - \xi_s (C_2-C_1) + J + \left(1- \sigma_s\right)L_p\left((p_a-p) - \sigma_p \Delta \Pi_p - \sigma_s \rho (C_1-C_2) \right) \frac{C_1 + C_2}{2}
+\]
+Resolution ? (stationary state ?)
+%\[
+%p\left( L_p + \frac{1}{R} \right) = L_p \left(pa - \sigma_p \Delta \Pi_p - \sigma_s \rho C_1_right) + \frac{p_e}{R} + \sigma_s \rho C_2
+%\]
+\[
+p = \alpha_1 + \alpha_2 C_2
+\]
+\[
+\alpha_1 = \frac{1}{L_p + \frac{1}{R}} \left( L_p \left( p_a - \sigma_p \Delta \Pi_p - \sigma_s \rho C_1 \right) + \frac{p_e}{R}\right)
+\]
+\[
+\alpha_2 = \frac{\sigma_s \rho}{L_p + \frac{1}{R}}
+\]
+\[
+\Delta \Pi_s = \rho (C_1 - C2)
+\]
+then 
+\[
+C_1 = \frac{\Delta \Pi_s}{\rho} + C_2
+\]
+Resolution : non stationary state ? 
+\[
+V = V_0 + \alpha (p - \beta ) - \beta P
+\]
+\[
+\frac{\dd V}{\dd t}= \alpha \frac{\dd p}{\dd t}
+\]
+But we're gonna go with ODE system
+\[
+\alpha \frac{\dd p}{\dd t} = f(p, C_2)
+\]
+with
+\[
+V^\star \frac{\dd C_2}{\dd t} = g(p, C_2)
+\]
+\section{values}
+\[	
+L_p = 0.3 mm^ 3
+\]
+\[
+p_a = 30-35 mmHg \mathrm{Healthy}
+\]
+\[
+\sigma_p = 1
+\]
+\[
+\Delta \Pi_p = 25 mmHg
+\]
+\[
+\sigma_s = 0.02-0.2
+\]
+\[
+\sigma_s = \sigma_s (R) \approx 0.032
+\]
+\[
+p = p(R)
+\]
+\[
+F_h = F_h(R)
+\]
+\[
+C_1 = ?
+\]
+\[
+p_e = 4 \mathrm{to} 8 mmHg
+\]
+\[
+2.5 - 5 mmHg min / mm^3
+\]
+\[
+\rho = \mathrm{gaz constant } \times \mathrm{absolute temperature}
+\]
+\[
+J = 0.04 - 0.18  \mu mol/min
+\]
+\[
+\xi = ?
+\]
+
+\section{Goal}
+\begin{enumerate}
+\item Paper values $\rightarrow$ p
+\item $R,L_p,\sigma_s$
+\item as 2/ for $p_a = 20 \ldots 40$ 
+\item $R = R(p)$
+\item $V_3$ choroid
+\item connect with retina
+\end{enumerate}
+\end{document}
