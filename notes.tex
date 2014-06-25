@@ -93,9 +93,9 @@ IOP < P_{chamber}
 \]
 
 \section{model}
-%\[
-%\frac{\dd V}{\dd t} = L_{p} \left( (p_{a} -p) _ \sigma_{p} \Delta \Pi_{p} - \sigma_{s} \rho (C_{1}- C_{2}) \right) - \frac{p - p_{e} }{R}
-%\]
+\[
+\frac{\dd V}{\dd t} = L_{p} \left( (p_{a} -p) - \sigma_{p} \Delta \Pi_{p} - \sigma_{s} \rho (C_{1}- C_{2}) \right) - \frac{p - p_{e} }{R}
+\]
 \[
 f(v,p) = 0
 \]
@@ -103,9 +103,9 @@ f(v,p) = 0
 V^\star \frac{\dd C_2}{\dd t} = - \xi_s (C_2-C_1) + J + \left(1- \sigma_s\right)L_p\left((p_a-p) - \sigma_p \Delta \Pi_p - \sigma_s \rho (C_1-C_2) \right) \frac{C_1 + C_2}{2}
 \]
 Resolution ? (stationary state ?)
-%\[
-%p\left( L_p + \frac{1}{R} \right) = L_p \left(pa - \sigma_p \Delta \Pi_p - \sigma_s \rho C_1_right) + \frac{p_e}{R} + \sigma_s \rho C_2
-%\]
+\[
+p\left( L_p + \frac{1}{R} \right) = L_p \left(pa - \sigma_p \Delta \Pi_p - \sigma_s \rho C_1\right) + \frac{p_e}{R} + \sigma_s \rho C_2
+\]
 \[
 p = \alpha_1 + \alpha_2 C_2
 \]
@@ -138,49 +138,26 @@ with
 V^\star \frac{\dd C_2}{\dd t} = g(p, C_2)
 \]
 \section{values}
-\[	
-L_p = 0.3 mm^ 3
-\]
-\[
-p_a = 30-35 mmHg \mathrm{Healthy}
-\]
-\[
-\sigma_p = 1
-\]
-\[
-\Delta \Pi_p = 25 mmHg
-\]
-\[
-\sigma_s = 0.02-0.2
-\]
-\[
-\sigma_s = \sigma_s (R) \approx 0.032
-\]
-\[
-p = p(R)
-\]
-\[
-F_h = F_h(R)
-\]
-\[
-C_1 = ?
-\]
-\[
-p_e = 4 \mathrm{to} 8 mmHg
-\]
-\[
-2.5 - 5 mmHg min / mm^3
-\]
-\[
-\rho = \mathrm{gaz constant } \times \mathrm{absolute temperature}
-\]
-\[
-J = 0.04 - 0.18  \mu mol/min
-\]
-\[
-\xi = ?
-\]
+\begin{tabular}{|l|l||l|l|}
+ \hline
+$ L_p $ &$0.3 mm^ 3$&$p_a$&  $30$-$35$ mmHg (Healthy)\\
 
+$\sigma_p$& $ 1$& $\Delta \Pi_p$&$25$ mmHg\\
+
+$\sigma_s$& $0.02$-$0.2$& $\sigma_s =  \sigma_s (R)$& $\approx 0.032$\\
+
+$p = p(R)$&& $F_h = F_h(R)$&\\
+
+$C_1 $& ??& $p_e$& $ 4 $- $8$ mmHg\\
+
+?? & $2.5 - 5$ mmHg min / mm$^3$
+& $\rho$& gaz constant $ \times$ absolute temperature \\
+
+$J$ & $0.04$ - $0.18$  $\mu$ mol/min
+
+&$\xi$&?\\
+\hline
+\end{tabular}
 \section{Goal}
 \begin{enumerate}
 \item Paper values $\rightarrow$ p
