@@ -46,7 +46,7 @@
 \let\pa\partial
 \def \intdb{\int\!\!\!\!\int}
 
-\title{Test BGK mail 20 fév.} 
+\title{Basically anything we put on the board} 
 \date{}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
@@ -81,16 +81,34 @@ escapeinside={\%*}{*)},         % if you want to add a comment within your code
 morekeywords={*,...}            % if you want to add more keywords to the set
 }
 \begin{document}
+\maketitle
 \section{Asumptions}
-\[
-R_{inflow} \ll R_{outflow}
-\]
-\[
-p_{chamber} = p
-\]
-\[
-IOP < P_{chamber}
-\]
+\begin{center}
+\begin{tabular}{|c|p{0.5\textwidth}|}
+\hline
+$R_{\mathrm{inflow}} \ll R_{\mathrm{outflow}}$&\\
+\hline
+$p_{\mathrm{chamber}} = p$&\\
+\hline
+$IOP < P_{\mathrm{chamber}}$&\\
+\hline
+$\Delta_p = \mathrm{Constant}$&osmotic pressure difference accross the membrane\\
+\hline
+$C_{p_2} \approx 2$ &protein concentration in aqueous humor at membrane output \\
+\hline
+$\sigma_p = 1 $ &reflection coefficients for protein\\
+\hline
+$C_1,C_2 < \eps$ & total molar concentration of low molecular components in the blood ($1$) and in the intraocular fluid ($2$) $<$ some  $\eps$\\
+\hline
+$T_1 \ll T_2$ & Diffusion time $\ll$ dwell time \\
+\hline
+$\dd V = \dd U$ & $\dd$ total volume $= \dd$ Volume of aqueous humor in the chambers \\
+\hline
+$\dd V_3 =0 $ & average over rapid oscillation of blood in the choroid\\
+\hline
+\end{tabular}
+\end{center}
+
 
 \section{model}
 \[
