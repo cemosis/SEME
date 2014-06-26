@@ -46,7 +46,7 @@
 \let\pa\partial
 \def \intdb{\int\!\!\!\!\int}
 
-\title{Basically anything we put on the board}
+\title{Datas}
 \date{}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
@@ -82,111 +82,252 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 }
 \begin{document}
 \maketitle
-\section{Asumptions}
+%\section{Datas/Values}
 \begin{center}
-\begin{tabular}{|c|p{0.5\textwidth}|}
+\begin{tabular}{|c|p{0.5\textwidth}|l|}
 \hline
-$R_{\mathrm{inflow}} \ll R_{\mathrm{outflow}}$&\\
+Notation & Definition (according to \cite{lyubimov2007dynamics}) & Value \\
 \hline
-$p_{\mathrm{chamber}} = p$&\\
 \hline
-$IOP < P_{\mathrm{chamber}}$&\\
+$U$ & Total aqueous humor & \\
 \hline
-$\Delta_p = \mathrm{Constant}$&osmotic pressure difference accross the membrane\\
+$F_h$ & Fluid inflow in posterior chamber & mean daily value : $2.4 \mathrm{mm}^3/\mathrm{min}$ \\
+&& datas : $2.1$ -- $4.0 \mathrm{mm}^3/min$\\
 \hline
-$C_{p_2} \approx 2$ &protein concentration in aqueous humor at membrane output \\
+$F_e$ & net inflow via trabecular path & \\
+ \hline
+ $p$ & IOP & $14$ -- $30 \mathrm{mmHg}$\\
+ \hline
+ $R$ & output hydraulic resistance & $2.5$--$5 \mathrm{mmHgmin}/\mathrm{mm}^3$ \cite{lyubimov2007dynamics}\\
+ && $4\mathrm{mmHgmin}/\mathrm{mm}^3$ (mean) \cite{bill1975blood}\\
+ \hline
+ $p_e$ & pressure in the episcleral veins & $4$ -- $8$ $\mathrm{mmHG} $\\
+ \hline
+ $p_a$ & pressure in the ciliary body capillaries & $30$ -- $35 \mathrm{mmHg}$ \cite{lyubimov2007dynamics}\\
+ &we can find it by using the formula $p_a = 1/3 \mathrm{MAP} $ \textit{REF?} & HBP : $35.5 \mathrm{mmHg} $ -- NBP : $31.1\mathrm{mmHg}$  \\
+ && LBP : $26.6\mathrm{mmHg}$\\
+ \hline
+ $L_p$ & permeability of the equivalent membrane & $0.3 \mathrm{mm^3}/\mathrm{minmmHg}$\\
+ \hline
+ $\Delta \Pi_p $& osmotic pressure diff. accross membrane (proteins) &$\approx 25 \mathrm{mmHg}$\\
+ \hline
+ $\Delta \Pi_s $&osmotic pressure diff. accross membrane (low molecular component)& $-400$ -- $-450 \mathrm{mmHg}$\\
+ \hline
+ $\sigma_p$ &reflection coeff. (proteins) & $1$ \\
+ \hline
+ $\sigma_s$ & reflection coeff. (low molecular components) & \textit{must range} $0.02$--$0.2$ \\
+ \hline
+$ C_{p_1}$& proteins concentration at membrane output (blood plasma) & $\approx 7 \mathrm{g}/\mathrm{dl}$ \\
 \hline
-$\sigma_p = 1 $ &reflection coefficients for protein\\
+$C_{p_2}$ & proteins concentration at membrane output (aqueous humor) &$\approx 0$ \\
 \hline
-$C_1,C_2 < \eps$ & total molar concentration of low molecular components in the blood ($1$) and in the intraocular fluid ($2$) $<$ some  $\eps$\\
+$C_p$ & proteins concentration & $\equiv C_{p_1}$ \\
 \hline
-$T_1 \ll T_2$ & Diffusion time $\ll$ dwell time \\
+$\rho$ & universal gas constant $\times$  absolute temperature &$8.31 \times 300 \mathrm{J}/\mathrm{mol} $\\
+&& $2493 \mathrm{N}.\mathrm{m}/\mathrm{mol}$\\
 \hline
-$\dd V = \dd U$ & $\dd$ total volume $= \dd$ Volume of aqueous humor in the chambers \\
+$C_1$& total molar concentration of low-molecular components (blood) & $306.64.10^{-3} \mu \mathrm{mol}/\mathrm{mm}^3$ \textbf{??}\cite{to2002mechanism}\\\\
 \hline
-$\dd V_3 =0 $ & average over rapid oscillation of blood in the choroid\\
+$C_2$& total molar concentration of low-molecular components (intra-ocular fluid near ciliary body surface) & \\
+\hline
+$C_2^0$&Initial possible value of $C_2$&$325.02 \mu \mathrm{mol}/\mathrm{mL}$ \\
+& & $ = 325.02.10^{-3}	 \mu \mathrm{mol}/\mathrm{mm^3}$
+\cite{to2002mechanism}\\
+\hline
+$Q_s$ & Flux of these low-molecular components & \\
+\hline
+$J$ & Influx due to active transport & $\approx 0.04$--$0.18 \mu \mathrm{mol} / \mathrm{min}$\\
+\hline
+$\xi_s$ & average permeability of membrane for low-molecular species& \\
+\hline
+$\overline{C}$& $\displaystyle{\frac{C_1+C_2}{2}}$& \\
+\hline
+
+$V^\star$ & volume of intraocular fluid between the folds of the ciliary body & $20 \mathrm{mm}^3 $\\
+\hline
+
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|p{0.5\textwidth}|l|}
+\hline
+Notation & Definition (according to \cite{lyubimov2007dynamics}) & Value \\
+\hline
+\hline
+$2l$& characteristic distances between the folds of strongly convoluted surface of the ciliary body & $100 \mu \mathrm{m}$\\
+\hline
+$D$ & diffusion coefficient (low molecular species in water) & $\approx 10^{-9} \mathrm{m}/\mathrm{s}$\\
+\hline
+$T_1$ & characteristic time of diffusion mixing ($T_1 = l^2/D$)& $<2.5 \approx1$\\
+\hline
+$T_2$ & dwell time of fluid between the folds of ciliary body ($T_2 = V^\star /F_h$) & $\approx 10 \mathrm{min}$\\
+\hline
+$V_1$ & volume of posterior chamber & $\approx 60 \mathrm{mm}^3$\\
+\hline
+$T_3$ & dwell time in the posterior chamber ($T_3 = V_1 / F_h$) & $\approx 25 \mathrm{min}$\\
+\hline
+$L$ & characteristic distance covered by the fluid in posterior chamber & $ \approx 1 \mathrm{cm} $ \\
+\hline
+$T_4$& diffusion time in the posterior chamber ($T_1 = L^2/D$) & $\approx 2 \times 10^2 \mathrm{min}$
+\\
+\hline
+$Q_e$ & solute outflow from $V^\star$ into the posterior chamber & \\
+\hline
+$V_2$ & volume of solid structure & \\
+\hline
+$V_3$ & volume of blood in blood vessels and choroids & \\
+\hline
+$S$ & area of the posterior chamber-facing secreting surface of the ciliary body & $6 \mathrm{mm}^2 $\\
+\hline
+$\xi_0$ & epithelial membrane permeability coeff. for low-molecular admixture per unit area ($\xi_0 = \xi/S$) & $ 10^7 \mathrm{
+m}/\mathrm{s}$
+\\
+\hline
+$\alpha$ & volume compliance of the eye shell (varies significantly)& $ 1 \mathrm{mm}^3/\mathrm{mmHg}$\\
+\hline
+$\tau$ & characteristic time of transient processes for hydrodynamic quantities (if $\Delta \Pi_s = \mathrm{Ct}$)&$\approx 1 \mathrm{min}$ (or somewhat higher\\
+\hline
 \hline
 \end{tabular}
 \end{center}
-
-
-\section{model}
-\[
-\frac{\dd V}{\dd t} = L_{p} \left( (p_{a} -p) - \sigma_{p} \Delta \Pi_{p} - \sigma_{s} \rho (C_{1}- C_{2}) \right) - \frac{p - p_{e} }{R}
-\]
-\[
-f(v,p) = 0
-\]
-\[
-V^\star \frac{\dd C_2}{\dd t} = - \xi_s (C_2-C_1) + J + \left(1- \sigma_s\right)L_p\left((p_a-p) - \sigma_p \Delta \Pi_p - \sigma_s \rho (C_1-C_2) \right) \frac{C_1 + C_2}{2}
-\]
-Resolution ? (stationary state ?)
-\[
-p\left( L_p + \frac{1}{R} \right) = L_p \left(pa - \sigma_p \Delta \Pi_p - \sigma_s \rho C_1\right) + \frac{p_e}{R} + \sigma_s \rho C_2
-\]
-\[
-p = \alpha_1 + \alpha_2 C_2
-\]
-\[
-\alpha_1 = \frac{1}{L_p + \frac{1}{R}} \left( L_p \left( p_a - \sigma_p \Delta \Pi_p - \sigma_s \rho C_1 \right) + \frac{p_e}{R}\right)
-\]
-\[
-\alpha_2 = \frac{\sigma_s \rho}{L_p + \frac{1}{R}}
-\]
-\[
-\Delta \Pi_s = \rho (C_1 - C2)
-\]
-then
-\[
-C_1 = \frac{\Delta \Pi_s}{\rho} + C_2
-\]
-Resolution : non stationary state ?
-\[
-V = V_0 + \alpha (p - \beta ) - \beta P
-\]
-\[
-\frac{\dd V}{\dd t}= \alpha \frac{\dd p}{\dd t}
-\]
-But we're gonna go with ODE system
-\[
-\alpha \frac{\dd p}{\dd t} = f(p, C_2)
-\]
-with
-\[
-V^\star \frac{\dd C_2}{\dd t} = g(p, C_2)
-\]
-\section{values}
-\begin{tabular}{|l|l||l|l|}
- \hline
-$ L_p $ &$0.3 mm^ 3$&$p_a$&  $30$-$35$ mmHg (Healthy)\\
-
-$\sigma_p$& $ 1$& $\Delta \Pi_p$&$25$ mmHg\\
-
-$\sigma_s$& $0.02$-$0.2$& $\sigma_s =  \sigma_s (R)$& $\approx 0.032$\\
-
-$p = p(R)$&& $F_h = F_h(R)$&\\
-
-$C_1 $& ??& $p_e$& $ 4 $- $8$ mmHg\\
-
-?? & $2.5 - 5$ mmHg min / mm$^3$
-& $\rho$& gaz constant $ \times$ absolute temperature \\
-
-$J$ & $0.04$ - $0.18$  $\mu$ mol/min
-
-&$\xi$&?\\
+Now in the general case where $\Delta \Pi_s$ varies
+\begin{center}
+\begin{tabular}{|c|p{0.5\textwidth}|l|}
 \hline
+\hline
+$\tau_c$ & characteristic time (stabilization of the concentrations) (if $\Delta \Pi_s $ varies)&an order greater than $\tau$ \\ &&\textit{need checking}\\
+\hline
+$F_h^\star$ & characteristic influx rate & $\approx 2.4 \mathrm{mm}^3/\mathrm{min}$\\
+\hline
+$p_t$ & amplitude of $p(\omega)$&\\
+\hline
+$\Delta \phi$ & phase shift relative to the forcing action& \\
+\hline
+
 \end{tabular}
-\section{Goal}
-\begin{enumerate}
-\item Paper values $\rightarrow$ p
-\item $R,L_p,\sigma_s$
-\item as 2/ for $p_a = 20 \ldots 40$
-\item $R = R(p)$
-\item $V_3$ choroid
-\item connect with retina
-\end{enumerate}
-
-
-Here is change
-
+\end{center}
+%\section{Asumptions}
+%\begin{center}
+%\begin{tabular}{|c|p{0.5\textwidth}|}
+%\hline
+%$R_{\mathrm{inflow}} \ll R_{\mathrm{outflow}}$&\\
+%\hline
+%$p_{\mathrm{chamber}} = p$&\\
+%\hline
+%$IOP < P_{\mathrm{chamber}}$&\\
+%\hline
+%$\Delta_p = \mathrm{Constant}$&osmotic pressure difference accross the membrane\\
+%\hline
+%$C_{p_2} \approx 2$ &protein concentration in aqueous humor at membrane output \\
+%\hline
+%$\sigma_p = 1 $ &reflection coefficients for protein\\
+%\hline
+%$C_1,C_2 < \eps$ & total molar concentration of low molecular components in the blood ($1$) and in the intraocular fluid ($2$) $<$ some  $\eps$\\
+%\hline
+%$T_1 \ll T_2$ & Diffusion time $\ll$ dwell time \\
+%\hline
+%$\dd V = \dd U$ & $\dd$ total volume $= \dd$ Volume of aqueous humor in the chambers \\
+%\hline
+%$\dd V_3 =0 $ & average over rapid oscillation of blood in the choroid\\
+%\hline
+%\end{tabular}
+%\end{center}
+%
+%
+%\section{model}
+%\[
+%\frac{\dd V}{\dd t} = L_{p} \left( (p_{a} -p) - \sigma_{p} \Delta \Pi_{p} - \sigma_{s} \rho (C_{1}- C_{2}) \right) - \frac{p - p_{e} }{R}
+%\]
+%\[
+%f(v,p) = 0
+%\]
+%\[
+%V^\star \frac{\dd C_2}{\dd t} = - \xi_s (C_2-C_1) + J + \left(1- \sigma_s\right)L_p\left((p_a-p) - \sigma_p \Delta \Pi_p - \sigma_s \rho (C_1-C_2) \right) \frac{C_1 + C_2}{2}
+%\]
+%Resolution ? (stationary state ?)
+%\[
+%p\left( L_p + \frac{1}{R} \right) = L_p \left(pa - \sigma_p \Delta \Pi_p - \sigma_s \rho C_1\right) + \frac{p_e}{R} + \sigma_s \rho C_2
+%\]
+%\[
+%p = \alpha_1 + \alpha_2 C_2
+%\]
+%\[
+%\alpha_1 = \frac{1}{L_p + \frac{1}{R}} \left( L_p \left( p_a - \sigma_p \Delta \Pi_p - \sigma_s \rho C_1 \right) + \frac{p_e}{R}\right)
+%\]
+%\[
+%\alpha_2 = \frac{\sigma_s \rho}{L_p + \frac{1}{R}}
+%\]
+%\[
+%\Delta \Pi_s = \rho (C_1 - C2)
+%\]
+%then
+%\[
+%C_1 = \frac{\Delta \Pi_s}{\rho} + C_2
+%\]
+%Resolution : non stationary state ?
+%\[
+%V = V_0 + \alpha (p - \beta ) - \beta P
+%\]
+%\[
+%\frac{\dd V}{\dd t}= \alpha \frac{\dd p}{\dd t}
+%\]
+%But we're gonna go with ODE system
+%\[
+%\alpha \frac{\dd p}{\dd t} = f(p, C_2)
+%\]
+%with
+%\[
+%V^\star \frac{\dd C_2}{\dd t} = g(p, C_2)
+%\]
+%%\section{values}
+%%\begin{tabular}{|l|l||l|l|}
+%% \hline
+%%$ L_p $ &$0.3 mm^ 3$&$p_a$&  $30$-$35$ mmHg (Healthy)\\
+%%
+%%$\sigma_p$& $ 1$& $\Delta \Pi_p$&$25$ mmHg\\
+%%
+%%$\sigma_s$& $0.02$-$0.2$& $\sigma_s =  \sigma_s (R)$& $\approx 0.032$\\
+%%
+%%$p = p(R)$&& $F_h = F_h(R)$&\\
+%%
+%%$C_1 $& ??& $p_e$& $ 4 $- $8$ mmHg\\
+%%
+%%?? & $2.5 - 5$ mmHg min / mm$^3$
+%%& $\rho$& gaz constant $ \times$ absolute temperature \\
+%%
+%%$J$ & $0.04$ - $0.18$  $\mu$ mol/min
+%%
+%%&$\xi$&?\\
+%%\hline
+%%\end{tabular}\begin{tabular}{|l|l||l|l|}
+%% \hline
+%%$ L_p $ &$0.3 mm^ 3$&$p_a$&  $30$-$35$ mmHg (Healthy)\\
+%%
+%%$\sigma_p$& $ 1$& $\Delta \Pi_p$&$25$ mmHg\\
+%%
+%%$\sigma_s$& $0.02$-$0.2$& $\sigma_s =  \sigma_s (R)$& $\approx 0.032$\\
+%%
+%%$p = p(R)$&& $F_h = F_h(R)$&\\
+%%
+%%$C_1 $& ??& $p_e$& $ 4 $- $8$ mmHg\\
+%%
+%%?? & $2.5 - 5$ mmHg min / mm$^3$
+%%& $\rho$& gaz constant $ \times$ absolute temperature \\
+%%
+%%$J$ & $0.04$ - $0.18$  $\mu$ mol/min
+%%
+%%&$\xi$&?\\
+%%\hline
+%%\end{tabular}
+%\section{Goal}
+%\begin{enumerate}
+%\item Paper values $\rightarrow$ p
+%\item $R,L_p,\sigma_s$
+%\item as 2/ for $p_a = 20 \ldots 40$
+%\item $R = R(p)$
+%\item $V_3$ choroid
+%\item connect with retina
+%\end{enumerate}
+\bibliographystyle{plain}
+\bibliography{bibli}
 \end{document}
