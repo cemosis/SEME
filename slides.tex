@@ -7,7 +7,6 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage{hyperref}
-\usepackage{tikz}
 \usepackage{graphicx}
 \usepackage{media9}
 \usepackage{amsmath,amsthm,amsfonts}
@@ -110,22 +109,21 @@ Beside, drugs could work better on patients depending on their age, gender, ethn
 
 \begin{frame}{Mass balances}
 $$ \frac{dU}{dt}=F_{h}-F_{e}$$
+$U$: Total aqueous humor\\
+$F_h$: Fluid inflow in posterior chamber\\
+$F_e$: net inflow via trabecular path
+
 $$F_{h}= L_p \big[ (p_a-p)-\sigma_{p} \Delta\pi_{p}-\sigma_{s} \Delta\pi_{s}\big]$$
 $$\Delta\pi_{s}= \rho(C_1-C_{2}) $$
 $$ V^{\ast} \frac{dC_{2}}{dt}= Q_s-Q_e=\xi_s(C_1-C_{2})+F_h (1-\sigma_s) \bar{C}+J-F_h C_2$$
 $$ \alpha \frac{dp}{dt}=F_{h}-\frac{p-p_e}{R}$$
 
-\begin{tabular}{|c|p{0.5\textwidth}|}
+\begin{tabular}{|c|p{0.5\textwidth}|l|}
 \hline
 Notation & Definition (according to \cite{lyubimov2007dynamics}) & Value \\
 \hline
 \hline
-$U$ & Total aqueous humor & \\
-\hline
-$F_h$ & Fluid inflow in posterior chamber & mean daily value : $2.4 \mathrm{mm}^3/\mathrm{min}$ \\
-&& datas : $2.1$ -- $4.0 \mathrm{mm}^3/min$\\
-\hline
-$F_e$ & net inflow via trabecular path & \\
+
  \hline
  $p$ & IOP & $14$ -- $30 \mathrm{mmHg}$\\
  \hline
@@ -179,9 +177,7 @@ $V^\star$ & volume of intraocular fluid between the folds of the ciliary body & 
 \begin{frame}{Recovering some values}
 
 \end{frame}
-\begin{frame}
-\input{hist}
-\end{frame}
+
 \begin{frame}{Summary}
 -3 equations
 \end{frame}
