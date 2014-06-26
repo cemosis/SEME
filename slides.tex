@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{media9}
 \usepackage{amsmath,amsthm,amsfonts}
+\usepackage{pgfplots}
 %\usepackage{theorem}
 
 \title{}
@@ -112,9 +113,18 @@ $$ \frac{dU}{dt}=F_{h}-F_{e}$$
 $U$: Total aqueous humor\\
 $F_h$: Fluid inflow in posterior chamber\\
 $F_e$: net inflow via trabecular path
+\newline
+\\
 
-$$F_{h}= L_p \big[ (p_a-p)-\sigma_{p} \Delta\pi_{p}-\sigma_{s} \Delta\pi_{s}\big]$$
-$$\Delta\pi_{s}= \rho(C_1-C_{2}) $$
+$$F_{h}= L_p \big[ (p_a-p)-\sigma_{p} \Delta\pi_{p}-\sigma_{s} \Delta\pi_{s}\big]$$\\
+$L_p$: permeability of the equivalent membrane\\
+$p_a$: pressure in the ciliary body capillaries\\
+$p$: IOP \\
+$\sigma_s$: reflection coefficient (low molecular components)\\
+$\Delta \Pi_s $: osmotic pressure diff. across membrane (low molecular component)\\
+
+$$\Delta\pi_{s}= \rho(C_1-C_{2}) $$\\
+
 $$ V^{\ast} \frac{dC_{2}}{dt}= Q_s-Q_e=\xi_s(C_1-C_{2})+F_h (1-\sigma_s) \bar{C}+J-F_h C_2$$
 $$ \alpha \frac{dp}{dt}=F_{h}-\frac{p-p_e}{R}$$
 
@@ -123,18 +133,10 @@ $$ \alpha \frac{dp}{dt}=F_{h}-\frac{p-p_e}{R}$$
 Notation & Definition (according to \cite{lyubimov2007dynamics}) & Value \\
 \hline
 \hline
-
- \hline
- $p$ & IOP & $14$ -- $30 \mathrm{mmHg}$\\
- \hline
  $R$ & output hydraulic resistance & $2.5$--$5 \mathrm{mmHgmin}/\mathrm{mm}^3$ \cite{lyubimov2007dynamics}\\
  && $4\mathrm{mmHgmin}/\mathrm{mm}^3$ (mean) \cite{bill1975blood}\\
  \hline
  $p_e$ & pressure in the episcleral veins & $4$ -- $8$ $\mathrm{mmHG} $\\
- \hline
- $p_a$ & pressure in the ciliary body capillaries & $30$ -- $35 \mathrm{mmHg}$ \cite{lyubimov2007dynamics}\\
- &we can find it by using the formula $p_a = 1/3 \mathrm{MAP} $ \textit{REF?} & HBP : $35.5 \mathrm{mmHg} $ -- NBP : $31.1\mathrm{mmHg}$  \\
- && LBP : $26.6\mathrm{mmHg}$\\
  \hline
  $L_p$ & permeability of the equivalent membrane & $0.3 \mathrm{mm^3}/\mathrm{minmmHg}$\\
  \hline
@@ -175,7 +177,11 @@ $V^\star$ & volume of intraocular fluid between the folds of the ciliary body & 
 \section{Numerical Results}
 
 \begin{frame}{Recovering some values}
-
+%\pgfplotsset{
+%  compat=newest,
+%  xlabel near ticks,
+%  ylabel near ticks
+%}
 \end{frame}
 
 \begin{frame}{Summary}
