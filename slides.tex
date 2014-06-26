@@ -120,50 +120,33 @@ $$F_{h}= L_p \big[ (p_a-p)-\sigma_{p} \Delta\pi_{p}-\sigma_{s} \Delta\pi_{s}\big
 $L_p$: permeability of the equivalent membrane\\
 $p_a$: pressure in the ciliary body capillaries\\
 $p$: IOP \\
+$\sigma_p$: reflection coefficient (proteins)\\
 $\sigma_s$: reflection coefficient (low molecular components)\\
-$\Delta \Pi_s $: osmotic pressure diff. across membrane (low molecular component)\\
-
+$\Delta \pi_p $: osmotic pressure diff. accross membrane (proteins)\\
+$\Delta \pi_s $: osmotic pressure diff. across membrane (low molecular component)
+\newline
+\\
+\end{frame}
+\begin{frame}
 $$\Delta\pi_{s}= \rho(C_1-C_{2}) $$\\
-
-$$ V^{\ast} \frac{dC_{2}}{dt}= Q_s-Q_e=\xi_s(C_1-C_{2})+F_h (1-\sigma_s) \bar{C}+J-F_h C_2$$
-$$ \alpha \frac{dp}{dt}=F_{h}-\frac{p-p_e}{R}$$
-
-\begin{tabular}{|c|p{0.5\textwidth}|l|}
-\hline
-Notation & Definition (according to \cite{lyubimov2007dynamics}) & Value \\
-\hline
-\hline
- $R$ & output hydraulic resistance & $2.5$--$5 \mathrm{mmHgmin}/\mathrm{mm}^3$ \cite{lyubimov2007dynamics}\\
- && $4\mathrm{mmHgmin}/\mathrm{mm}^3$ (mean) \cite{bill1975blood}\\
- \hline
- $p_e$ & pressure in the episcleral veins & $4$ -- $8$ $\mathrm{mmHG} $\\
- \hline
- $L_p$ & permeability of the equivalent membrane & $0.3 \mathrm{mm^3}/\mathrm{minmmHg}$\\
- \hline
- $\Delta \Pi_p $& osmotic pressure diff. accross membrane (proteins) &$\approx 25 \mathrm{mmHg}$\\
- \hline
- $\Delta \Pi_s $&osmotic pressure diff. accross membrane (low molecular component)& $-400$ -- $-450 \mathrm{mmHg}$\\
- \hline
- $\sigma_p$ &reflection coeff. (proteins) & $1$ \\
- \hline
- $\sigma_s$ & reflection coeff. (low molecular components) & \textit{must range} $0.02$--$0.2$ \\
- \hline
-$\rho$ & universal gas constant $\times$  absolute temperature &$8.31 \times 300 \mathrm{J}/\mathrm{mol} $\\
-&& $2493 \mathrm{N}.\mathrm{m}/\mathrm{mol}$\\
-\hline
-$C_1$& total molar concentration of low-molecular components (blood) & $306.64.10^{-3} \mu \mathrm{mol}/\mathrm{mm}^3$ \textbf{??}\cite{to2002mechanism}\\\\
-\hline
-$C_2$& total molar concentration of low-molecular components (intra-ocular fluid near ciliary body surface) & \\
-\hline
-$J$ & Influx due to active transport & $\approx 0.04$--$0.18 \mu \mathrm{mol} / \mathrm{min}$\\
-\hline
-$\overline{C}$& $\displaystyle{\frac{C_1+C_2}{2}}$& \\
-\hline
-$V^\star$ & volume of intraocular fluid between the folds of the ciliary body & $20 \mathrm{mm}^3 $\\
-\hline
-
-\end{tabular}
-
+$\rho$ & universal gas constant $\times$  absolute temperature\\
+$C_1$: total molar concentration of low-molecular components (blood)\\
+$C_2$: total molar concentration of low-molecular components (intra-ocular fluid near ciliary body surface) 
+\newline
+\\
+$$ V^{\ast} \frac{dC_{2}}{dt}= Q_s-Q_e=\xi_s(C_1-C_{2})+F_h (1-\sigma_s) \bar{C}+J-F_h C_2$$\\
+$V^\star$: volume of intraocular fluid between the folds of the ciliary body\\
+$\xi_s$: average permeability of membrane for low-molecular species\\
+$\overline{C}$=$\displaystyle{\frac{C_1+C_2}{2}}$\\
+$J$: Influx due to active transport
+\newline
+\\
+$$ \alpha \frac{dp}{dt}=F_{h}-\frac{p-p_e}{R}$$\\
+$p_e$: pressure in the episcleral veins\\
+$R$: output hydraulic resistance\\
+$\alpha$: volume compliance of the eye shell (varies significantly)
+\newline
+\\
 \end{frame}
 
 \begin{frame}{Assumptions}
