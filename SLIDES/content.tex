@@ -5,7 +5,7 @@
 \end{frame}
 
 \section{Problem statement}
-
+\frame{\sectionpage}
 \begin{frame}{Eye description}
 Eye is the organs of vision; it allows the conversion of light into impulses in neurons
 \begin{center}
@@ -116,16 +116,19 @@ Besides, drugs could work better on patients depending on their age, gender, eth
 \end{frame}
 
 \section{Mathematical Model}
-
+\frame{\sectionpage}
 \begin{frame}{Model of intraocular fluids dynamics}
 \begin{block}{}
 \[
 \frac{\dd U}{\dd t}=F_{h}-F_{e}
 \]
 \end{block}
-$U$: Total aqueous humor\\
-$F_h$: Fluid inflow in posterior chamber\\
-$F_e$: net inflow via trabecular path
+\begin{itemize}
+\item $U$: Total aqueous humor
+\item $F_h$: Fluid inflow in posterior chamber
+\item $F_e$: net inflow via trabecular path
+\end{itemize}
+
 
 
 
@@ -133,41 +136,26 @@ $F_e$: net inflow via trabecular path
 F_{h}= L_p \big[ (p_a-p)-\sigma_{p} \Delta\pi_{p}-\sigma_{s} \Delta\pi_{s}\big]
 \]
 
-%$L_p$: permeability of the equivalent membrane\\
-$p_a$: pressure in the ciliary body capillaries\\
-$p$: IOP \\
-$\sigma_p$: reflection coefficient (proteins)\\
-$\sigma_s$: reflection coefficient (low molecular components)\\
-
-$\Delta \pi_p $: osmotic pressure diff. accross membrane (proteins)\\
-$\Delta \pi_s $: osmotic pressure diff. across membrane (low molecular component)
-
-\end{frame}
-
-\begin{frame}
+\only<1>{
+\begin{itemize}
+\item $L_p$: permeability of the equivalent membrane
+\item $p_a$: pressure in the ciliary body capillaries
+\item $p$: IOP 
+\item $\sigma_p$: reflection coefficient (proteins)
+\item $\sigma_s$: reflection coefficient (low molecular components)
+\item $\Delta \pi_p $: osmotic pressure diff. accross membrane (proteins)
+\item $\Delta \pi_s $: osmotic pressure diff. across membrane (low molecular component)
+\end{itemize}}
+\only<2>{
 \[
 \Delta\pi_{s}= \rho(C_1-C_{2}) 
 \]
-\small{$\rho$: universal gas constant $\times$  absolute temperature\\
-$C_1$: total molar concentration of low-molecular components (blood)\\
-$C_2$: total molar concentration of low-molecular components (intra-ocular fluid near ciliary body surface) }
-%\begin{block}{}
-%\[
-% \alpha \frac{dp}{dt}=F_{h}-\frac{p-p_e}{R}
-% \]
-%\[
-% V^{\ast} \frac{dC_{2}}{dt}= Q_s-Q_e=\xi_s(C_1-C_{2})+F_h (1-\sigma_s) \bar{C}+J-F_h C_2
-% \]
-%\end{block}
-%\small{
-%$V^\star$: volume of intraocular fluid between the folds of the ciliary body\\
-%$\xi_s$: average permeability of membrane for low-molecular species\\
-%$\overline{C}$=$\displaystyle{\frac{C_1+C_2}{2}}$\\
-%$J$: Influx due to active transport
-%$p_e$: pressure in the episcleral veins\\
-%$R$: output hydraulic resistance\\
-%$\alpha$: volume compliance of the eye shell (varies significantly)}
-
+\begin{itemize}
+\item $\rho$: universal gas constant $\times$  absolute temperature
+\item $C_1$: total molar concentration of low-molecular components (blood)
+\item $C_2$: total molar concentration of low-molecular components (intra-ocular fluid near ciliary body surface)
+\end{itemize}
+}
 \end{frame}
 
 \begin{frame}{Stationary case}
@@ -187,11 +175,34 @@ F_h (1 - \sigma_s) \overline{C} + J = F_hC_2 , \; \overline{C}= C_1+C2
 \tiny{source : \textit{Dynamic of the intraocular fluid}Lyobimov et al, 2007}
 \end{frame}
 
-\begin{frame}{Data}
+\begin{frame}{Nonstationary case}
+Linearisation of $V(p)$
+\[
+V = V(p) \approx V_0 + \alpha (p-p_0)
+\]
+$\alpha$ : volume compliance of the eye shell (directly measured in experiments/varies significantly)
+
+\begin{block}{}
+\[
+ \alpha \frac{dp}{dt}=F_{h}-\frac{p-p_e}{R}
+ \]
+\[
+ V^{\ast} \frac{dC_{2}}{dt}= F_h(1-\sigma_s)\overline{C} + J - F_hC_2,\; \overline{C}= \frac{C_1+C_2}{2}
+ \]
+\end{block}
+
+$V^\star$: volume of intraocular fluid between the folds of the ciliary body\\
+$J$: Influx due to active transport
+$p_e$: pressure in the episcleral veins\\
+$R$: output hydraulic resistance\\
 
 \end{frame}
 
 \section{Numerical Results}
+\frame{\sectionpage}
+\begin{frame}
+
+\end{frame}
 \begin{frame}
 \input{hist}
 \end{frame}
