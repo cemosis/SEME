@@ -3,11 +3,16 @@
 
 \begin{center}
 
-\Large{\ALERT{Merk project : \\
-Intraocular fluid simulation}}
+\Large{\ALERT{Merk project: \\
+Intraocular fluid simulation}}\\
+
+\begin{center}
+10th Mathematics Enterprise Study Group\\
+Strasbourg 
+\end{center}
 
 \bigskip
-	\footnotesize\textcolor{brunfonce}{27 juin 2014}
+	\footnotesize\textcolor{brunfonce}{June 27th, 2014}
 \end{center}
 
 \end{frame}
@@ -16,7 +21,7 @@ Intraocular fluid simulation}}
 \section{Problem statement}
 \frame{\sectionpage}
 \begin{frame}{Eye description}
-Eye is the organs of vision; it allows the conversion of light into impulses in neurons
+The eye is the organs of vision; it allows the conversion of light into impulses in neurons.
 \begin{center}
 \includegraphics[width=.7\linewidth]{Eye.jpg}
 \end{center}
@@ -24,9 +29,9 @@ Eye is the organs of vision; it allows the conversion of light into impulses in 
 \end{frame}
 
 \begin{frame}{Eye description}
-Aqueous humor : produced by the ciliary epithelium.
+Aqueous humor: produced by the ciliary epithelium.
 $\rightarrow$ drains into the Schlemm's canal.\\
-Pressure produced : the intra-ocular pression (IOP).
+Pressure produced: the intra-ocular pression (IOP).
 \begin{center}
 \includegraphics[width=.5\linewidth]{Humor.jpg}
 \end{center}
@@ -37,8 +42,8 @@ Pressure produced : the intra-ocular pression (IOP).
 \begin{frame}{IOP}
 IOP : 10 -- 22 mmHg for human (average : 16 mmHg)
 \begin{itemize}
-\item inflates the globe of the eye
-\item measure (tonometry) takes into account the thickness 
+\item inflates the globe of the eye.
+\item experimental measure (tonometry) takes into account the thickness. 
 \end{itemize}
 %
 %
@@ -48,7 +53,7 @@ IOP : 10 -- 22 mmHg for human (average : 16 mmHg)
 \tiny{source: \url{http://www.aviva.co.uk/health-insurance/home-of-health/medical-centre/medical-encyclopedia/entry/test-tonometry/}}
 \end{center}
 \only<2>{\begin{center}
-\ALERT{High IOP $\Rightarrow$ major risk for \textit{glaucoma}.} 
+\ALERT{High IOP $\Rightarrow$ major risk for \textit{glaucoma}. IT IS ACKWARD TO ALREADY MENTION GLAUCOMA BEFORE INTRODUCING IT (next slide) ...} 
 \end{center}}
 \end{frame}
 
@@ -101,15 +106,16 @@ However, the IOP remains the only parameter we can act on, either by surgery or 
 }\end{center}}
 \end{frame}
 
-\begin{frame}{Treatment}
+\begin{frame}[shrink=5]{Treatment}
 
-The medications have two effects :
+The medications have two effects:
 %: either decrease the secretion of aqueous humor or increase the elimination of it. It is also possible to combine several treatments in order to decrease even more the IOP.
 \newline
 \\
 \begin{tabular}{|c|c|}
 \hline
-Decrease the secretion of aqueous humor & Increase the elimination of aqueous humor\\
+Decrease the secretion & Increase the elimination \\
+of aqueous humor &  of aqueous humor\\
 \hline
 beta-adrenergic receptor antagonists & Prostaglandin analogs \\
 Alpha2-adrenergic agonists & Miotic agents \\
@@ -119,10 +125,20 @@ Carbonic anhydrase inhibitors &  \\
 \end{tabular}
 \newline
 \newline
+
+\textcolor{red}{may be shorten / reformulate the second part of this slide}
 It is also possible to combine several treatments in order to decrease even more the IOP.
 Besides, drugs could work better on patients depending on their age, gender, ethnic group or other diseases like diabetes, hypertension...
 
 \end{frame}
+
+\begin{frame}
+
+\textcolor{red}{add some transition between clinics and math; what are the open questions?
+why the statistical studies are not sufficient to explain what is happening? $\Rightarrow$ math modeling
+is needed (you may use ideas from Alon's presentation, slides 19 -- 22).}
+\end{frame}
+
 
 \section{Mathematical Model}
 \frame{\sectionpage}
@@ -135,7 +151,7 @@ Besides, drugs could work better on patients depending on their age, gender, eth
 \begin{itemize}
 \item $U$: Total aqueous humor
 \item $F_h$: Fluid inflow in posterior chamber
-\item $F_e$: net inflow via trabecular path
+\item $F_e$: net \textcolor{red}{outflow} via trabecular path \textcolor{red}{formula in the sequel?}
 \end{itemize}
 
 
@@ -163,6 +179,7 @@ F_{h}= L_p \big[ (p_a-p)-\sigma_{p} \Delta\pi_{p}-\sigma_{s} \Delta\pi_{s}\big]
 \item $\rho$: universal gas constant $\times$  absolute temperature
 \item $C_1$: total molar concentration of low-molecular components (blood)
 \item $C_2$: total molar concentration of low-molecular components (intra-ocular fluid near ciliary body surface)
+\item \textcolor{red}{already mention initial conditions?}
 \end{itemize}
 }
 \end{frame}
@@ -222,7 +239,7 @@ $R$: output hydraulic resistance\\
 \begin{frame}
 \input{hist}
 \end{frame}
-\begin{frame}{time evolution}
+\begin{frame}{time evolution \textcolor{red}{of ... ?}}
 \begin{figure}[H]
 \begin{minipage}{0.45\linewidth}
 \includegraphics[scale=0.27]{images/IOP_time.png}
@@ -232,7 +249,7 @@ $R$: output hydraulic resistance\\
 \end{minipage}
 \end{figure}
 \end{frame}
-\begin{frame}{R influence}
+\begin{frame}{The influence of the \textcolor{red}{Outflow resistance (same remark for the other titles, recall which are the quatities)} R}
 \begin{figure}[H]
 \begin{minipage}{0.45\linewidth}
 \includegraphics[scale=0.27]{images/IOP_R}
@@ -270,7 +287,7 @@ $R$: output hydraulic resistance\\
 \ALERT{Conclusions}
 \begin{itemize}
 \item First numerical simulation of intraocular system
-\item ODE system with constant osmotic pressure
+\item ODE system with constant osmotic pressure (\textcolor{red}{add a comment about uncoupled vs. coupled ODES ...})
 \item First results of influence of parameters that can change with medical intervention (drop/surgery)
 \end{itemize}
 
