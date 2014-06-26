@@ -82,7 +82,11 @@ morekeywords={*,...}            % if you want to add more keywords to the set
 }
 \begin{document}
 \maketitle
+<<<<<<< HEAD
 %\section{Datas/Values}
+=======
+\section{Assumptions}
+>>>>>>> d30c0c707ca6ead34131d29007f34f702bac5546
 \begin{center}
 \begin{tabular}{|c|p{0.5\textwidth}|l|}
 \hline
@@ -142,6 +146,73 @@ $\xi_s$ & average permeability of membrane for low-molecular species& \\
 \hline
 $\overline{C}$& $\displaystyle{\frac{C_1+C_2}{2}}$& \\
 \hline
+<<<<<<< HEAD
+=======
+\end{tabular}
+\end{center}
+
+
+\section{Mathematical model}
+\[
+\frac{\dd V}{\dd t} = L_{p} \left( (p_{a} -p) - \sigma_{p} \Delta \Pi_{p} - \sigma_{s} \rho (C_{1}- C_{2}) \right) - \frac{p - p_{e} }{R}
+\]
+\[
+f(v,p) = 0
+\]
+\[
+V^\star \frac{\dd C_2}{\dd t} = - \xi_s (C_2-C_1) + J + \left(1- \sigma_s\right)L_p\left((p_a-p) - \sigma_p \Delta \Pi_p - \sigma_s \rho (C_1-C_2) \right) \frac{C_1 + C_2}{2}
+\]
+Resolution ? (stationary state ?)
+\[
+p\left( L_p + \frac{1}{R} \right) = L_p \left(pa - \sigma_p \Delta \Pi_p - \sigma_s \rho C_1\right) + \frac{p_e}{R} + \sigma_s \rho C_2
+\]
+\[
+p = \alpha_1 + \alpha_2 C_2
+\]
+\[
+\alpha_1 = \frac{1}{L_p + \frac{1}{R}} \left( L_p \left( p_a - \sigma_p \Delta \Pi_p - \sigma_s \rho C_1 \right) + \frac{p_e}{R}\right)
+\]
+\[
+\alpha_2 = \frac{\sigma_s \rho}{L_p + \frac{1}{R}}
+\]
+\[
+\Delta \Pi_s = \rho (C_1 - C2)
+\]
+then 
+\[
+C_1 = \frac{\Delta \Pi_s}{\rho} + C_2
+\]
+Resolution : non stationary state ? 
+\[
+V = V_0 + \alpha (p - \beta ) - \beta P
+\]
+\[
+\frac{\dd V}{\dd t}= \alpha \frac{\dd p}{\dd t}
+\]
+But we're gonna go with ODE system
+\[
+\alpha \frac{\dd p}{\dd t} = f(p, C_2)
+\]
+with
+\[
+V^\star \frac{\dd C_2}{\dd t} = g(p, C_2)
+\]
+\section{values}
+\begin{tabular}{|l|l||l|l|}
+ \hline
+$ L_p $ &$0.3 mm^ 3$&$p_a$&  $30$-$35$ mmHg (Healthy)\\
+
+$\sigma_p$& $ 1$& $\Delta \Pi_p$&$25$ mmHg\\
+
+$\sigma_s$& $0.02$-$0.2$& $\sigma_s =  \sigma_s (R)$& $\approx 0.032$\\
+
+$p = p(R)$&& $F_h = F_h(R)$&\\
+
+$C_1 $& ??& $p_e$& $ 4 $- $8$ mmHg\\
+
+?? & $2.5 - 5$ mmHg min / mm$^3$
+& $\rho$& gaz constant $ \times$ absolute temperature \\
+>>>>>>> d30c0c707ca6ead34131d29007f34f702bac5546
 
 $V^\star$ & volume of intraocular fluid between the folds of the ciliary body & $20 \mathrm{mm}^3 $\\
 \hline 
