@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\begin{axis}[
+    symbolic x coords={excellent, good, average, bad, awful},
+        ylabel = {probability},
+        xlabel = {Quality},
+    xtick=data]
+    \addplot[ybar,fill=white] coordinates {
+        (excellent,5)
+        (good,10)
+        (average,50)
+    (bad, 20)
+    (awful,15)
+    };
+\end{axis}
+\end{tikzpicture}
