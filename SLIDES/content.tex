@@ -200,12 +200,16 @@ $R$: output hydraulic resistance\\
 
 \section{Numerical Results}
 \frame{\sectionpage}
-%\begin{frame}{Resolution}
-%\begin{itemize}
-%
-%\end{itemize}
-%
-%\end{frame}
+\begin{frame}{Resolution}
+\begin{itemize}
+\item ODE system : Octave \texttt{ode45} (RK (4,5))
+\item Data set from litterature\footnote{Lyubimov et al, 2007,Anders, 1975,The mechanism of aqueous humour formation,2002}
+\item Osmotic difference assumed constant
+\item Initial values : physiological range
+\item Neglecting oscillating component
+\end{itemize}
+
+\end{frame}
 \begin{frame}
 \input{hist}
 \end{frame}
@@ -253,6 +257,20 @@ $R$: output hydraulic resistance\\
 \end{figure}
 
 \end{frame}
+\begin{frame}{Conclusion and perspectives}
+\ALERT{Conclusions}
+\begin{itemize}
+\item First numerical simulation of intraocular system
+\item ODE system with constant osmotic pressure
+\item First results of influence of parameters that can change with medical intervention (drop/surgery)
+\end{itemize}
 
+\ALERT{Perspectives}
+\begin{itemize}
+\item Coupling with retina mathematical model
+\item Inclusion of different time scales (oscillating system)
+\item Inclusion of intracranial pressure
+\end{itemize}
+\end{frame}
 
 
