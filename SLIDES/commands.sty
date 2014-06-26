@@ -1,0 +1,196 @@
+\providecommand\mathbb{\bf}
+
+
+%%%%%%%%%%%% espaces%%%%%%%%%%%
+\newcommand{\im}{\mathrm{Im}\;}
+\newcommand\R{{\mathbb R}}
+\newcommand\N{{\mathbb N}}
+\newcommand\Z{{\mathbb Z}}
+\newcommand\T{{\mathbb T}}
+%%%%%%%%%%%%%%%%%Espace L^n %%%%%%%%%%%%%%%%%%%%
+\newcommand{\ltxvm}{L^2\left (M^{-1}\mathrm{d}x\mathrm{d}v\right)}
+\newcommand{\ltvm}{{L^2 ( M^{-1}\mathrm{d}v  )}}
+\newcommand{\ltxv}{L^2(\R ^2 \times \R ^2)}
+\newcommand{\ltroistrois}{L^2(\R ^3 \times \R ^3)}
+\newcommand{\ltrois}{L^2(\R ^3 )}
+\newcommand{\ltx}{L^2(\R ^2)}
+\newcommand{\ltm}{{L^2 _M}}
+\newcommand{\loxv}{L^1( \R ^3 \times \R ^3)}
+\newcommand{\linftltxvm}{L^\infty \left ( \R_+,\ltxvm \right )}
+\newcommand{\cocxv}{C^1 _c (\R^3 \times \R^3)}
+\newcommand{\linftloxv}{L^\infty \left ( \R_+,L^1(\R^3 \times \R ^3) \right )}
+%%%%%%%%%%%%%% données %%%%%%%%%%%
+\newcommand{\ctau}{{\cal T}}
+\newcommand{\oc}{\omega _c}
+\newcommand{\ocx}{\omega _c (x)}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\tc}{T_c (x)}
+\newcommand{\Be}{B ^\varepsilon}
+\newcommand{\bB}{{\bold B}}
+\newcommand{\polE}{{^{\; \perp} \overline{E}}}
+\newcommand{\olE}{\overline{E}}
+
+%%%%%%%%%%%%%%%%%%%% variantes de x %%%%%%%%%%%%%%%%
+\newcommand{\xb}{\overline{x}}	
+\newcommand{\olx}{\overline{x}}
+\newcommand{\olX}{\overline{X}}
+\newcommand{\olxp}{\overline{x^{\prime}}}
+\newcommand{\oly}{{\overline{y}}}
+\newcommand{\olyp}{{\overline{y^\prime}}}
+\newcommand{\pz}{{^\perp z}}
+\newcommand{\polx}{{^{\; \perp} \overline{x}}}
+%%%%%%%%%%%%%%%%%%%% variantes de v %%%%%%%%%%%%%%%%
+\newcommand{\vb}{\overline{v}}
+\newcommand{\olV}{\overline{V}}	
+\newcommand{\polv}{{^{ \bot} \overline{v}}}
+\newcommand{\polV}{{^{ \bot} \overline{V}}}
+\newcommand{\vp}{v^{\prime}}
+\newcommand{\olvp}{\overline{v^{\prime}}}
+\newcommand{\polvp}{{^{ \bot}}\overline{v^{\prime}}}
+\newcommand{\vtp}{v_3^{\prime}}
+\newcommand{\vorth}{^\bot v}
+\newcommand{\olv}{\overline{v}}
+\newcommand{\olvpolv}{\left (\frac{(\olv, 0)}{|\olv|},\frac{(\polv, 0)}{|\olv|}
+\right )}
+\newcommand{\polvolv}{\left (\frac{(\polv, 0)}{|\olv|},-\frac{(\olv, 0)}{|\olv|}   \right )}
+\newcommand{\olvppolvp}{\left (\frac{(\olvp, 0)}{|\olvp|},\frac{(\polvp, 0)}{|\olvp|}\right )}
+\newcommand{\polvpolvp}{\left (\frac{(\polvp, 0)}{|\olvp|},-\frac{(\olvp, 0)}{|\olvp|}   \right )}
+
+%%%%%%%%%%%%%%%%\int %%%%%%%%%%%%%%%%%%%%
+\newcommand{\intvm}[1]{\int _{\R ^3} #1\;\frac{\mathrm{d}v}{M}  }
+\newcommand{\intxv}[1]{\int _{\R^3}\!\int _{\R^3} \!#1 \;
+\mathrm{d}v\mathrm{d}x}
+
+\newcommand{\intx}[1]{\int _{\R ^3} #1\;\mathrm{d}x  }
+\newcommand{\inttxv}[1]{\int _{\R_+} \!\int _{\R ^3} \!\int _{ \R^3}\!\!#1\;\mathrm{d}v\mathrm{d}x\mathrm{d}t}
+\newcommand{\deuxdintxv}[1]{\int _{\R^2}\!\int _{\R^2} \!#1 \;
+\mathrm{d}v\mathrm{d}x}
+\newcommand{\deuxdinttxv}[1]{\int _{\R_+} \!\int _{\R ^2} \!\int _{ \R^2}\!\!#1\;\mathrm{d}v\mathrm{d}x\mathrm{d}t}
+\newcommand{\inttxvm}[1]{\int _{\R_+} \!\int _{\R ^3} \!\int _{ \R^3}\!\!#1\;\frac{\mathrm{d}v\mathrm{d}x}{M}\mathrm{d}t}
+
+\newcommand{\intvpd}[1]{\int _{\R ^2} #1\;\mathrm{d}v^{\prime}  }
+\newcommand{\intvp}[1]{\int _{\R ^3} #1\;\mathrm{d}v^{\prime}  }
+\newcommand{\intv}[1]{\int _{\R ^3} #1\;\mathrm{d}v  }
+\newcommand{\intolxpvp}[1]{\int _{\R^2}\!\int _{\R^3} \!\!#1\;\mathrm{d}v^{\prime}\mathrm{d}x^{\prime}_1\mathrm{d}x^{\prime}_2}
+\newcommand{\inttpi}{
+\int _0 ^{2\pi}\!\!\!\!}
+\newcommand{\intxpvp}[1]{\int_{\R^3}\!\! \int _{\R^3} #1 \;\mathrm{d}v^\prime\mathrm{d}x^\prime}
+\newcommand{\intolxv}[1]{\int _{\R^2}\!\int _{\R^3} \!\!#1\;\mathrm{d}v\mathrm{d}x_1\mathrm{d}x_2}
+\newcommand{\intolxolv}[1]{
+\int _{\R^2}\!\int _{\R^2} \!\!#1\;\mathrm{d}\olv\mathrm{d}\olx}
+\newcommand{\intvvp}[1]{\int _{\R^3}\!\int _{\R^3} \!\!#1\;\mathrm{d}v^{\prime}\mathrm{d}v}
+
+\newcommand{\intolypvp}[1]{
+\int _{\R^2}\!\int _{\R^3} \!\!#1\;\mathrm{d}v^{\prime}\mathrm{d}y^{\prime}_1\mathrm{d}y^{\prime}_2}
+
+%%%%%%%%%%%%%%%%%%%% DIV %%%%%%%%%%%%%%%%%%%%
+\newcommand{\Div}{\mathrm{div}}
+\newcommand{\Divx}{\mathrm{div}_x}
+\newcommand{\Divv}{\mathrm{div}_v}
+\newcommand{\Divxv}{\mathrm{div}_{x,v}}
+\newcommand{\nxv}{\nabla_{x,v}}
+\newcommand{\divolx}{\mathrm{div}_{\overline{x}}}
+\newcommand{\divoolx}{\mathrm{div}_{\omega _c \overline{x}}}
+\newcommand{\divolv}{\mathrm{div}_{\overline{v}}}
+\newcommand{\divolvp}{\mathrm{div}_{\overline{v^\prime}}}
+\newcommand{\divx}{\mathrm{div}_x}
+\newcommand{\divv}{\mathrm{div}_v}
+\newcommand{\divxv}{\mathrm{div}_{x,v}}
+\newcommand{\divoxv}{\mathrm{div}_{\omega _c x,v}}
+%%%%%%%%%%%%%%%%%%%%%%%%%f %%%%%%%%%%%%%%%
+\newcommand{\fo}{f ^1}
+\newcommand{\fine}{f ^{\mathrm{in}}_{\varepsilon}}
+\newcommand{\fe}{f ^\varepsilon}
+\newcommand{\Fe}{F ^\varepsilon}
+\newcommand{\fin}{f ^{\mathrm{in}}}
+\newcommand{\fek}{f ^{\varepsilon _k}}
+\newcommand{\ffm}{\left ( \frac{f}{M} \right )}
+%%%%%%%%%%%%%%%%%% Spécial Noyaux %%%%%%%%%
+\newcommand{\fpl}{Fokker--Planck--Landau }
+
+\newcommand{\fp}{Fokker--Planck }
+\newcommand{\qfpl}{Q_{FPL} }
+\newcommand{\qb}{Q_B }
+\newcommand{\qfp}{Q_{FP} }
+\newcommand{\svvp}{s(v,v^{\prime})}
+\newcommand{\tC}{\tilde{C}}
+\newcommand{\CurC}{\mathscr{C}}
+\newcommand{\ind}[1]{{\bf 1}_{#1}}
+\newcommand{\rp}{r^\prime}
+\newcommand{\avetpi}{\frac{1}{2\pi}\int _0 ^{2\pi}\!\!\!\!}
+\newcommand{\z}{(\oc \olx + \polv ) - ( \oc \olx' + \polv ')}
+\newcommand{\alphap}{\alpha^{\prime}}
+\newcommand{\fs}{f _s}
+\newcommand{\fsp}{f _{s^\prime}}
+\newcommand{\musi}{\mu _{s s^\prime} ^2 \sigma _{s s^\prime} (|v - v^\prime|) |v - v^\prime |^3}
+\newcommand{\imww}{\left ( I - \frac{w \otimes w}{|w|^2} \right ) }
+\newcommand{\tD}{\tilde{D}}
+\newcommand{\tDp}{\tilde{D}^\prime}
+\newcommand{\tDt}{\tilde{D}_3}
+\newcommand{\tDtp}{\tilde{D}^\prime _3}
+\newcommand{\avess}[1]{\left \langle #1 \right \rangle _{\sigma S}}
+
+\newcommand{\vtz}{\frac{\left ((v_3 - \vtp)\frac{(z,0)}{|z|}, -|z|e_3  \right )}{\sqrt{|z|^2 + (v_3 - \vtp )^2}}}
+\newcommand{\lime}{\lim _{\varepsilon \searrow 0}}
+%%%%%%%%%%%%%%%%%%%% autres%%%%%%%%%%%%%%%%%%%%
+\newcommand{\D}{\mathrm{D}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\md}{\mathrm{d}}
+\newcommand{\ave}[1]{\left \langle #1 \right \rangle }
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\limk}{\lim _{k \to +\infty }}
+\newcommand{\manicefrac}[2]{\nicefrac{\textstyle{#1}}{\textstyle{#2}}}
+\newcommand{\tO}{{^t {\cal O}}}
+%%%%%%%%%%%%%%%%%%%% grad %%%%%%%%%%%%%%%%%%%%
+\newcommand{\gradoxv}{\nabla _{\oc x,v}}
+\newcommand{\gradoxvp}{\nabla _{\oc x,v^\prime}}
+\newcommand{\gradxv}{\nabla _{x,v}}
+\newcommand{\gradxvp}{\nabla _{x,v^\prime}}
+\newcommand{\gradoxpvp}{\nabla _{\oc x^{\prime},v^{\prime}}}
+\newcommand{\gradolx}{\nabla _{\olx}}
+\newcommand{\gradolv}{\nabla _{\olv}}
+\newcommand{\gradolvp}{\nabla _{\olvp}}
+
+
+%%%%%%%%%%%%%Micro macro%%%%%%%%%%%%
+
+\newcommand{\re}{r ^\varepsilon}
+\newcommand{\rez}{r ^{\varepsilon, 0}}
+\newcommand{\reo}{r ^{\varepsilon, 1}}
+\newcommand{\ren}{r ^{\varepsilon, n}}
+\newcommand{\renpo}{r ^{\varepsilon, n + 1}}
+\newcommand{\zez}{z ^{\varepsilon, 0}}
+\newcommand{\zeo}{z ^{\varepsilon, 1}}
+\newcommand{\zen}{z ^{\varepsilon, n}}
+\newcommand{\zenpo}{z ^{\varepsilon, n + 1}}
+\newcommand{\hen}{h ^{\varepsilon, n}}
+\newcommand{\hez}{h ^{\varepsilon, 0}}
+\newcommand{\heo}{h ^{\varepsilon, 1}}
+\newcommand{\henpo}{h ^{\varepsilon, n + 1}}
+\newcommand{\geps}{g ^\varepsilon}
+\newcommand{\gez}{g ^{\varepsilon, 0}}
+\newcommand{\geo}{g ^{\varepsilon, 1}}
+\newcommand{\gen}{g ^{\varepsilon, n}}
+\newcommand{\genpo}{g ^{\varepsilon, n + 1}}
+\newcommand{\limn}{\lim _{n \to +\infty}}
+\newcommand{\epsk}{\varepsilon _k}
+\newcommand{\coct}{C^1 _c (\R_+)}
+\newcommand{\finek}{f ^{\mathrm{in}}_{\varepsilon _k}}
+\newcommand{\coctxv}{C^1 _c (\R_+ \times \R ^2 \times \R ^2)}
+
+\newcommand{\bl}{{\cal B}^\lambda}
+\newcommand{\ol}{{\cal O}_\lambda}
+\newcommand{\ble}{{\cal B}^{\lambda _\varepsilon}}
+\newcommand{\radlo}{\sqrt{\lambda ^2 + \omega _c ^2}}
+
+\newcommand{\cl}{{\cal C} ^\lambda}
+\newcommand{\cle}{{\cal C}^{\lambda _\varepsilon}}
+\newcommand{\xil}{\xi^\lambda}
+%%%%%%%%%%%%%Cemracs%%%%%%%%%%%%%%%%%%%%
+\newcommand{\strain}[1]{\mathbf{\mathrm{D}}(#1)}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bodiv}{\mathbf{\mathrm{div}}}
+\newcommand{\bonab}{\mathbf{\nabla}}
+\newcommand{\stress}{\boldsymbol{\sigma}(\bu,p)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
