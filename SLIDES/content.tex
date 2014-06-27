@@ -240,7 +240,30 @@ is needed (you may use ideas from Alon's presentation, slides 19 -- 22).}
 \begin{frame}
 \input{hist}
 \end{frame}
-\begin{frame}{time evolution \textcolor{red}{of ... ?}}
+\begin{frame}
+\alert{For $10$ mmHg increase in SBP or DBP $\rightarrow$ increase in IOP in $0.2$ -- $0.5$ mmHg.}\footnote{Dekoule, Weinner}
+\bigskip
+
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+BP (SBP/DBP)& LBP($100$/$70$)&NBP($120$/$80$) & HBP ($140$/$90$)\\
+$p_a$ (mmHg)& $p_a = 26.6$ & $p_a = 31.1$ & $p_a = 35.5$\\
+\hline
+IOP & $10.74$ & $12.67$ & $14.56$\\
+\hline
+\end{tabular}
+\bigskip
+\begin{itemize}
+\item[$\star$] $\Delta$ SBP/DBP $\approx 30$ $\rightarrow \Delta$IOP$\approx 2$ mmHg\\
+
+\item[$\star$]SBP/DBP $\rightarrow$ $p_a$ $\rightarrow$ IOP \underline{slightly}\\
+
+\item[$\hookrightarrow$] Good agreement with clinical studies
+\end{itemize}
+
+\end{frame}
+\begin{frame}{Time evolution of IOP and $C_2$}
 \begin{figure}[H]
 \begin{minipage}{0.45\linewidth}
 \includegraphics[scale=0.27]{images/IOP_time}
@@ -251,7 +274,8 @@ is needed (you may use ideas from Alon's presentation, slides 19 -- 22).}
 \end{figure}
 
 \end{frame}
-\begin{frame}{The influence of the \textcolor{red}{Outflow resistance (same remark for the other titles, recall which are the quatities)} R}
+
+\begin{frame}{The influence of the Outflow resistance R}
 \begin{figure}[H]
 \begin{minipage}{0.45\linewidth}
 \includegraphics[scale=0.27]{images/IOP_R}
@@ -261,7 +285,24 @@ is needed (you may use ideas from Alon's presentation, slides 19 -- 22).}
 \end{minipage}
 \end{figure}
 \end{frame}
-\begin{frame}{$L_p$ influence}
+\begin{frame}{The influence of the Outflow resistance R}
+\begin{itemize}
+\item \alert{HBP }: $\Delta$IOP $\approx 3$ mmHg
+$\Rightarrow\frac{\Delta \mathrm{IOP}}{\Delta \mathrm{R}} \approx 1$
+\medskip
+
+\item \alert{NBP }: $\Delta$IOP $\approx 2.2$ mmHg
+$\Rightarrow
+\frac{\Delta \mathrm{IOP}}{\Delta \mathrm{R}} \approx 0.7$
+\medskip
+\item \alert{LBP }: $\Delta$IOP $\approx 1.1$ mmHg
+$\Rightarrow
+\frac{\Delta \mathrm{IOP}}{\Delta \mathrm{R}} \approx 0.3$
+\end{itemize}
+\bigskip
+\ALERT{Decreasing inflow resistance : larger IOP reduction for HBP patients}
+\end{frame}
+\begin{frame}{The influence of inflow permeability $L_p$}
 \begin{figure}[H]
 \begin{minipage}{0.45\linewidth}
 \includegraphics[scale=0.27]{images/IOP_Lp}
@@ -273,30 +314,67 @@ is needed (you may use ideas from Alon's presentation, slides 19 -- 22).}
 
 \end{frame}
 
+\begin{frame}{The influence of inflow permeability $L_p$}
+\begin{itemize}
+\item \alert{HBP }: $\Delta$IOP $\approx 5.9$ mmHg
+$\Rightarrow\frac{\Delta \mathrm{IOP}}{\Delta \mathrm{R}} \approx 15$
+\medskip
 
-\begin{frame}{$\sigma_s$ influence}
-\begin{figure}[H]
-\begin{minipage}{0.45\linewidth}
-\includegraphics[scale=0.27]{images/IOP_sigmas}
-\end{minipage}\hfill
-\begin{minipage}{0.45\linewidth}
-\includegraphics[scale=0.27]{images/C2_sigmas}
-\end{minipage}
-\end{figure}
-
+\item \alert{NBP }: $\Delta$IOP $\approx 4$ mmHg
+$\Rightarrow
+\frac{\Delta \mathrm{IOP}}{\Delta \mathrm{R}} \approx 10$
+\medskip
+\item \alert{LBP }: $\Delta$IOP $\approx 3.2$ mmHg
+$\Rightarrow
+\frac{\Delta \mathrm{IOP}}{\Delta \mathrm{R}} \approx 8$
+\end{itemize}
+\bigskip
+\begin{itemize}
+\item[$\star$] Larger IOP reduction for HBP patients
+\medskip
+\item[$\star$] Decreasing inflow permeability has overalll larger influence on IOP reduction than decreasing outflow resistance
+\end{itemize}
 \end{frame}
-\begin{frame}{Conclusion and perspectives}
-\ALERT{Conclusions}
-\begin{itemize}
-\item First numerical simulation of intraocular system
-\item ODE system with constant osmotic pressure (\textcolor{red}{add a comment about uncoupled vs. coupled ODES ...})
-\item First results of influence of parameters that can change with medical intervention (drop/surgery)
-\end{itemize}
 
-\ALERT{Perspectives}
+%\begin{frame}{$\sigma_s$ influence}
+%\begin{figure}[H]
+%\begin{minipage}{0.45\linewidth}
+%\includegraphics[scale=0.27]{images/IOP_sigmas}
+%\end{minipage}\hfill
+%\begin{minipage}{0.45\linewidth}
+%\includegraphics[scale=0.27]{images/C2_sigmas}
+%\end{minipage}
+%\end{figure}
+%
+%\end{frame}
+\section{Sumary, conclusions and perspectives}
+\begin{frame}{Summary}
 \begin{itemize}
-\item Coupling with retina mathematical model
-\item Inclusion of different time scales (oscillating system)
-\item Inclusion of intracranial pressure
+\item First numerical simulation of relations between blood pression and IOP
+\item Model suggests that IOP medication would have different efficacy in individual with different blood pressure
+\item Reduction of inflow permeability ($L_p$) gives larger IOP reductions thant reduction of outflow resistance ($R$)
 \end{itemize}
+\end{frame}
+\begin{frame}{Conclusions and perspectives}
+\ALERT{Model extensions}
+\begin{itemize}
+\item Distinguish anterior and posterior chamber
+\item Compliance of cornea (anterior chamber)/ sclera (posterior chamber)
+\item<2> Comparing model results with clinical studies (stats)
+\end{itemize}
+\only<1>{\begin{figure}[H]
+\begin{center}
+\includegraphics[scale = 0.7]{Eye.jpg}
+\end{center}
+\end{figure}
+\tiny{source: \url{http://academia.hixie.ch/bath/eye/home.html}}
+}
+
+
+\only<2>{\ALERT{Perspectives}
+\begin{itemize}
+\item Coupling with mathematical model of retinal blood flow
+\item Inclusion of oscillations in choroidal blood volume
+\item Modeling the relationship between IOP, blood pressure, intracranial pressure
+\end{itemize}}
 \end{frame}
