@@ -1,5 +1,0 @@
-\beamer@sectionintoc {1}{Problem statement}{2}{0}{1}
-\beamer@sectionintoc {2}{Mathematical Model}{12}{0}{2}
-\beamer@sectionintoc {3}{Numerical Results}{16}{0}{3}
-\beamer@endinputifotherversion {3.10pt}
-\select@language {french}
