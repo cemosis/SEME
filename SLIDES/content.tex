@@ -4,7 +4,7 @@
 \begin{center}
 
 {\Large\ALERT{Merck project: \\
-Intraocular fluid simulation}}\\
+Simulation of Intraocular Fluid Dynamics}}\\
 
 \begin{center}
 {\large 10th Mathematics Enterprise Study Group\\
@@ -14,7 +14,7 @@ Strasbourg}
 \bigskip
 \textcolor{brunfonce}{R. Agroum, C. Caldini-Queiros, D. Danan \\
 under the supervision of\\
-G. Guidoboni, C. Prud'homme, M. Szopos}\\
+G. Guidoboni, A. Harris, C. Prud'homme, M. Szopos}\\
  \bigskip
 	\footnotesize\textcolor{brunfonce}{June 27th, 2014}
 \end{center}
@@ -235,9 +235,9 @@ G. Guidoboni, C. Prud'homme, M. Szopos}\\
 \begin{frame}{Resolution}
 \begin{itemize}
 \item ODE system : Octave \texttt{ode45} (RK (4,5))
-\item Data set from litterature\footnote{Lyubimov et al, 2007,Anders, 1975,The mechanism of aqueous humour formation,2002}
+\item Data set from literature\footnote{Lyubimov et al, 2007,Anders, 1975,The mechanism of aqueous humour formation,2002}
 \item Osmotic difference assumed constant
-\item Initial values : physiological range
+\item Initial values: physiological range
 \item Neglecting oscillating component
 \end{itemize}
 
@@ -322,22 +322,22 @@ $\Rightarrow
 \begin{frame}{The influence of inflow permeability $L_p$}
 \begin{itemize}
 \item \alert{HBP }: $\Delta$IOP $\approx 5.9$ mmHg
-$\Rightarrow\frac{\Delta \mathrm{IOP}}{\Delta \mathrm{R}} \approx 15$
+$\Rightarrow\frac{\Delta \mathrm{IOP}}{\Delta L_p} \approx 15$
 \medskip
 
 \item \alert{NBP }: $\Delta$IOP $\approx 4$ mmHg
 $\Rightarrow
-\frac{\Delta \mathrm{IOP}}{\Delta \mathrm{R}} \approx 10$
+\frac{\Delta \mathrm{IOP}}{\Delta L_p} \approx 10$
 \medskip
 \item \alert{LBP }: $\Delta$IOP $\approx 3.2$ mmHg
 $\Rightarrow
-\frac{\Delta \mathrm{IOP}}{\Delta \mathrm{R}} \approx 8$
+\frac{\Delta \mathrm{IOP}}{\Delta L_p} \approx 8$
 \end{itemize}
 \bigskip
 \begin{itemize}
 \item[$\star$] Larger IOP reduction for HBP patients
 \medskip
-\item[$\star$] Decreasing inflow permeability has overalll larger influence on IOP reduction than decreasing outflow resistance
+\item[$\star$] Decreasing inflow permeability has overall larger influence on IOP reduction than decreasing outflow resistance
 \end{itemize}
 \end{frame}
 
@@ -355,20 +355,20 @@ $\Rightarrow
 \section{Sumary, conclusions and perspectives}
 \begin{frame}{Summary}
 \begin{itemize}
-\item First numerical simulation of relations between blood pression and IOP
-\item Model suggests that IOP medication would have different efficacy in individual with different blood pressure
-\item Reduction of inflow permeability ($L_p$) gives larger IOP reductions thant reduction of outflow resistance ($R$)
+\item First numerical simulation of relations between blood pressure and IOP.
+\item Model suggests that IOP medication would have different efficacy in individual with different blood pressure.
+\item Reduction of inflow permeability ($L_p$) gives larger IOP reductions thant reduction of outflow resistance ($R$).
 \end{itemize}
 \end{frame}
 \begin{frame}{Conclusions and perspectives}
 \ALERT{Model extensions}
 \begin{itemize}
-\item Distinguish anterior and posterior chamber
+\item Distinguish anterior and posterior chamber.
 
-\Alert{Note : Measure of IOP in anterior chamber, but posterior chamber is of interest}
-\item Compliance of cornea (anterior chamber)/ sclera (posterior chamber)
+\Alert{Note: Measure of IOP in anterior chamber, but posterior chamber is of interest.}
+\item Compliance of cornea (anterior chamber)/ sclera (posterior chamber).
 
-\item<2>{Non linear relationship between volume and pressure (biomechanical literature}
+\item<2>{Non linear relationship between volume and pressure (biomechanical literature).}
 \end{itemize}
 \only<1>{\begin{figure}[H]
 \begin{center}
@@ -380,13 +380,13 @@ $\Rightarrow
 
 
 \only<2>{
-\ALERT{Comparing model results with clinical studies (stats)}
+\ALERT{Comparing model results with clinical studies (statistics).}
 
 
 \ALERT{Perspectives}
 \begin{itemize}
-\item Coupling with mathematical model of retinal blood flow
-\item Inclusion of oscillations in choroidal blood volume (postior chamber $\leftrightarrow$ oscillation in IOP)
-\item Modeling the relationship between IOP, blood pressure, intracranial pressure
+\item Coupling with a mathematical model of retinal blood flow.
+\item Inclusion of oscillations in choroidal blood volume (posterior chamber $\leftrightarrow$ oscillation in IOP).
+\item Modeling the relationship between IOP, blood pressure, intracranial pressure.
 \end{itemize}}
 \end{frame}
