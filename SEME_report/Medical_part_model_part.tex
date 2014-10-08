@@ -13,7 +13,6 @@
 \begin{document}
 \vskip25mm
 \section{Introduction}\label{S1}
-
 \section{Medical aspect}\label{s2}
 \subsection{Description of the eye}
 \subsubsection{Aqueous humor }
@@ -50,7 +49,7 @@ As shown in the figure below, the morphological diagnostic is based on detecting
 $$ R=\frac{Area\ of\ the\ excavated\ surface}{Area\ of\ the\ whole\ ONH}$$
 If $R>0.4$, in the general case, it is reasonable to assume that the patient suffers from glaucoma.\\
 
-\textcolor{red}{--- Nevertheless, the size of the optic nerve head must be taken into account since the most important part is the area of the non excavated surface. That means an eye with a small A for a small ONH may be dangerous while an important A with a big ONH may be harmless. -- THIS PART IS NOT SO CLEAR TO ME.. CAN YOU PLEASE EXPLAIN?}\\
+Nevertheless, the size of the optic nerve head must be taken into account since the most important part is the area of the non excavated surface. As a matter of fact, if the ONH of a patient is very large (diameter) even with $R=0.5$ he may never contracts glaucoma; the alterations in the shape of the ONH are harmless. Conversely if the ONH is small, even with $R=0.2$, our patient is likely to contract glaucoma.\\
 
 Physiological/functional diagnostic in glaucoma is based on the loss of visual field, which is the total area in which you can see objects while you focus your eyes on a central point.\\
 %\begin{center}
@@ -116,7 +115,7 @@ with
 \textbf{Inflow process}\\
 The intraocular fluid and the solutes in it come from the blood in the capillaries. However, there exist several layers between the capillary blood and the intraocular fluid, and each layer is permeable to different solutes. 
 
-Thus, we consider here an equivalent membrane which is impermeable to large protein molecules and semipermeable to low molecular components. The fluid moves through the membrane because of a combination of hydrostatic and osmotic pressure differences between blood and aqueous humor.\\
+Thus, we consider here an equivalent membrane which is impermeable to large protein molecules and semipermeable to low molecular components. Therefore, $L_p$ is equivalent to the inverse of a resistance. The fluid moves through the membrane because of a combination of hydrostatic and osmotic pressure differences between blood and aqueous humor.\\
 The fluid inflow is then described by the following equation:
 \begin{equation}
 F_{h}= L_p \big[ (p_a-p)-\sigma_{p} \Delta\pi_{p}-\sigma_{s} \Delta\pi_{s}\big]
@@ -132,8 +131,7 @@ with
 \item $\Delta \pi_p $: osmotic pressure difference accross membrane (proteins)
 \item $\Delta \pi_s $: osmotic pressure difference across membrane (low molecular component)
 \end{itemize}
-\textcolor{red}{-- Note that $\Delta \pi_p $ and $\Delta \pi_s $ can be seen as resistances. -- NOT REALLY.. $L_p$ IS THE INVERSE OF A RESISTANCE.. Can you better explain what you mean?}
-The first is assumed to depend only of the concentration of the proteins in the arterial blood (almost no blood protein in the aqueous humor and implies that $\sigma_p=1$) while the last is proportional to the difference of the total molar concentration of the low molecular components across the membrane.
+Here, $\Delta \pi_p $ is assumed to depend only of the concentration of the proteins in the arterial blood (almost no blood protein in the aqueous humor and implies that $\sigma_p=1$) while and $\Delta \pi_s $ is proportional to the difference of the total molar concentration of the low molecular components across the membrane.
 \begin{equation}
 \Delta\pi_{s}= \rho(C_1-C_{2})
 \label{e4}
@@ -178,7 +176,7 @@ Finally, we combine (\ref{e1})-(\ref{e7}) to obtain the formulation of the probl
 \begin{equation}\label{e8}
 \left\{\begin{array}{ll}
 \displaystyle{\frac{dV}{dt}}= L_p \big[ (p_a-p)-\Delta\pi_{p}-\sigma_{s} \Delta\pi_{s}\big]-\frac{p-p_{e}}{R},\quad \Delta\pi_{s}=\rho(C_1-C_{2})\\
-\quad V^{\ast} \displaystyle{\frac{dC_{2}}{dt}}=J+\big[ L_p (p_a-p)- \Delta\pi_{p}-\sigma_{s} \Delta\pi_{s}\big] \big[(1-\sigma_s)\displaystyle{\frac{C_1+C_2}{2}-C_2\big]}
+\quad V^{\ast} \displaystyle{\frac{dC_{2}}{dt}}=J+L_p\big[(p_a-p)- \Delta\pi_{p}-\sigma_{s} \Delta\pi_{s}\big] \big[(1-\sigma_s)\displaystyle{\frac{C_1+C_2}{2}-C_2\big]}
 \end{array}\right.
 \end{equation}
 
@@ -215,7 +213,7 @@ Given the elasticity properties of the eye shell and assuming small pressure dev
 V = V(p) \approx V_0 + \alpha (p-p_0)
 \end{equation}
 The system (\ref{e8}) is replaced by
-\begin{equation}\label{e8}
+\begin{equation}\label{e9}
 \left\{\begin{array}{ll}
  \alpha \displaystyle{\frac{dp}{dt}}=F_{h}-\displaystyle{\frac{p-p_e}{R}}\\
 V^{\ast} \displaystyle{\frac{dC_{2}}{dt}}= F_h(1-\sigma_s)\overline{C} + J - F_hC_2,\; \overline{C}= \frac{C_1+C_2}{2}
