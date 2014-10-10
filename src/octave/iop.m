@@ -4,23 +4,24 @@ pkg load odepkg
 Lp = 0.3;
 Sigmap = 1;
 Sigmas = 0.032; # [-0.02;0.2]
-DeltaPi_s = -400;
-#rho=8.31*300e-3/133.322; # gaz constant * body temperature (K)
-#rho = 62.36e-3*300
-rho = 2494.19/133.322
-J=0.04*1e-6; # 0.04-0.18
+DeltaPi_s = -400; #mmHg
+#rho=8.31*300/133.322; # gaz constant * body temperature (K)
+#rho = (2494.19/133.322)#mmHg*m^3.mol^-1
+rho = (2494.19/133.322)*1e3#mmHg*mm^3.mumol^-1
+J=0.04*1e-6; # 0.04-0.18 #mumol.min-1
 #p_a = 30; # 30-35#normal : 31.1, hyper : 35.5, hypo : 26.6
-DeltaPi_p = 25; #
+DeltaPi_p = 25; # mmHg
 p_e = 8; # 4-8 mm Hg
 alpha = 1; # mm^3/mm Hg
-R=2.5; # 2.5 - 5
-Vstar=20;
-C1=314.04 #mol/m^3
+R=3.5; # 2.5 - 5 mmHg min mm^-3
+Vstar=20;#mm^3 
+C1=314.04; #mumol/mm^3
 #C1=DeltaPi_s/rho + C2;
 #clf(1);
 #clf(2);
 i = 1
 j = 1
+test =DeltaPi_s/rho
 #for R=linspace(2.5,5,10)
 lab = 1
 label = ['LBP','NBP','HBP']
@@ -33,7 +34,7 @@ for p_a = [26.6,31.1,35.5]
   vopt = odeset ("RelTol", 1e-8, "AbsTol", 1e-3,"NormControl", "on");
 				%vopt = odeset ("RelTol", 1e-3, "AbsTol", 1e-3,"NormControl", "on", "OutputFcn");
   C2init = C1-DeltaPi_s/rho
-  [t,y] = ode45(fvdb,[0,5000], [16 C2init], vopt);
+  [t,y] = ode45(fvdb,[0,2000], [16 C2init], vopt);
   figure(1);
   plot(t,y(:,1),['@',int2str(i),int2str(j),strcat(';',label(lab:lab+2),';')]);
   title('IOP = f(time) (in mmHg)')
@@ -41,7 +42,7 @@ for p_a = [26.6,31.1,35.5]
   hold on;
   figure(2);
   plot(t,y(:,2),['@',int2str(i),int2str(j),strcat(';',label(lab:lab+2),';')]);
-  title('C2 = f(time) (in mol.m^{-3})')
+  title('C2 = f(time) (in mumol.mm^{-3})')
   print C2_time.pdf
   hold on;
   i=i+1
