@@ -1,0 +1,30 @@
+\begin{figure}[h]
+
+\begin{center}
+  \begin{tikzpicture}[font=\small]
+    \begin{axis}[
+      ybar,
+      bar width=40pt,
+      xlabel={$p_a$},
+      ylabel={IOP},
+      ymin=0,
+      ytick=\empty,
+      xtick=data,
+      axis x line=bottom,
+      axis y line=left,
+      enlarge x limits=0.2,
+      %symbolic x coords={excellent,good,average,bad,awful},
+      symbolic x coords = {LBP(26.6),NBP(31.1),HBP(35.5)},
+      xticklabel style={anchor=base,yshift=-\baselineskip},
+      nodes near coords={\pgfmathprintnumber\pgfplotspointmeta}
+    ]
+      \addplot[fill=white] coordinates {
+        (LBP(26.6),9.3270)
+        (NBP(31.1),11.632)
+        (HBP(35.5),13.886)
+      };
+    \end{axis}
+  \end{tikzpicture}
+  \end{center}
+  \caption{$IOP = f(p_a)$}
+\end{figure}
