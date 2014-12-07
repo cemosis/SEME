@@ -1,4 +1,5 @@
 \documentclass[english,12pt]{article}
+%\usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc}
 %\usepackage{psfig}
 \usepackage{graphics}
@@ -13,33 +14,43 @@
 \begin{document}
 \vskip25mm
 \section{Introduction}\label{S1}
-\section{Medical aspect}\label{s2}
-\subsection{Description of the eye}
-\subsubsection{Aqueous humor }
-The eye is the organ of vision; it allows the conversion of light into impulses in neurons. You can find a simple description a the eye below.\\
+The eye is the organ of vision; it allows the conversion of light into impulses in neurons. You can find a simple description its global structure below.\\
 %\begin{center}
 %\includegraphics{Eye.jpg}\\
-%\tiny{source:{http://academia.hixie.ch/bath/eye/home.html}}
+%\tiny{source:{http://academia.hixie.ch/bath/eye/home.html}}\\
 %\small{Figure 1: Structure of the eye}
 %\end{center}
-Our main interest resides in the flow of aqueous humor, which is a transparent, gelatinous fluid similar to plasma located in the anterior and posterior chambers of the eye. Aqueous humor is produced by the ciliary epithelium and drains into the Schlemm's canal. The balance between production and drainage of aqueous humor regulates the fluid pressure inside the eye, also known as intraocular pressure (or IOP). 
+
+\ Even now, the mechanisms who rule the functioning of the eye are not fully known because of the lack of data both in its mechanical and geometric characteristics. Therefore, some aspects of the behavior of the eye remain mysterious such as the elevated intraocular pressure, which is in fact a major risk factor for vision loss, that is to say glaucoma. Thus, a better understanding of the phenomena behind this so-called IOP becomes necessary.
+
+\ In fact, glaucoma is a multi-factorial eye disease which means it is not exactly caused by an elevated IOP. In other words, there is no specific level of IOP that definitely leads to glaucoma! However, because of our lack of knowledge, this is the only factor we can act on. 
+
+\ For now, there exist several medications such as carbonic anhydrase inhibitors or beta-blockers that 
+should lower of the IOP. Unfortunately, the response to this medications is not consistent among patients since some physiological factors are assumed to influence the drug efficacy. Because the determining factors can only be deduced from clinical data, that is to say in vivo, they are quite difficult to isolate. Among the suspects, there are: the blood pressure, the levels of IOP itself, the gender, the ethnic group...And there is no end to it. By analysing the clinical data on a really significant number of patients, it would give us some way toward answering this question, which is still under investigation. Several studies have already been carried out on this subject. Here, we choose to build a mathematical model of intraoccular fluid dynamics instead. 
+
+\ The rest of the paper is structured as follows. In Section 2, we present some medical aspects about the structure of the eye and the glaucoma. In Section 3, we describe the model of intraocular fluid dynamics. And, finally, in section 4 we present numerical simulations.
+
+\section{Medical aspect}\label{s2}
+\subsection{Description of the eye}
+\subsubsection{Aqueous humor }\
+\indent\ Our main interest resides in the flow of aqueous humor, which is a transparent, gelatinous fluid similar to plasma located in the anterior and posterior chambers of the eye. Aqueous humor is produced by the ciliary epithelium and drains into the Schlemm's canal. The balance between production and drainage of aqueous humor regulates the fluid pressure inside the eye, also known as intraocular pressure (or IOP). \\
 %\begin{center}
 %\includegraphics{Humor.jpg}\\
 %\small{Figure 2: Flow of the aqueous humor}
 %\end{center}
-In healthy individuals, IOP ranges between 10 and 22 mmHg, with an average value of 16. 
+\indent In healthy individuals, IOP ranges between 10 and 22 mmHg, with an average value of 16. 
 IOP inflates the eye globe and help maintaining its almost spherical shape, which is very important for a correct vision. 
-IOP can be measured experimentally by tonometry as depicted in the figure below.
+IOP can be measured experimentally by tonometry as depicted in the figure below.\\
 %\begin{center}
 %\includegraphics{Tonometry.jpg}\\
 %\tiny{source:{http://www.aviva.co.uk/health-insurance/home-of-health/medical-centre/medical-encyclopedia/entry/test-tonometry/}}
 %\small{Figure 3: Tonometer}
 %\end{center}
- The ophthalmologist uses a fine jet of air directed toward the cornea and the machine measures the pressure by looking at the deformation when the air hits the eye. This measure is corrected by an algorithm that takes into account the thickness of the cornea, otherwise the value of IOP might be underestimated/overestimated.
+\indent The ophthalmologist uses a fine jet of air directed toward the cornea and the machine measures the pressure by looking at the deformation when the air hits the eye. This measure is corrected by an algorithm that takes into account the thickness of the cornea, otherwise the value of IOP might be underestimated/overestimated.
 Problems begin with an elevated IOP which is a major risk factor for vision loss.
 
-\subsubsection{Glaucoma}
-Glaucoma, also called the silent thief of sight, is the second leading cause of blindness worldwide (1 in 40 adults over 40 years old). This disease can be described as a group of ocular disorders with multi-factorial etiology united by a clinically characteristic optic neuropathy accompanied by a vision loss. Even though the exact origin of glaucoma is not known yet, there are two kinds of diagnostics: morphological damages and physiological/functional damages.\\
+\subsubsection{Glaucoma}\
+\indent Glaucoma, also called the silent thief of sight, is the second leading cause of blindness worldwide (1 in 40 adults over 40 years old). This disease can be described as a group of ocular disorders with multi-factorial etiology united by a clinically characteristic optic neuropathy accompanied by a vision loss. Even though the exact origin of glaucoma is not known yet, there are two kinds of diagnostics: morphological damages and physiological/functional damages.\\
 As shown in the figure below, the morphological diagnostic is based on detecting alterations in the shape of the optic nerve head (ONH), which is the part of the optic nerve that enters the eye.
 %\begin{center}
 %\includegraphics{Morphological.jpg}\\
@@ -54,7 +65,7 @@ Nevertheless, the size of the optic nerve head must be taken into account since 
 Physiological/functional diagnostic in glaucoma is based on the loss of visual field, which is the total area in which you can see objects while you focus your eyes on a central point.\\
 %\begin{center}
 %\includegraphics{Glaucoma.jpg}\\
-%\tiny{source: \url{http://www.swisscompleteeyecare.com/uploads/3/6/3/8/3638142/8901258.jpg?520}}
+%\tiny{source:{http://www.swisscompleteeyecare.com/uploads/3/6/3/8/3638142/8901258.jpg?520}}\\
 %\small{Figure 5: Evolution of the vision field for a Glaucoma patient}
 %\end{center}
 In healthy individuals, the visual field can be described with the following angles:\\
@@ -65,7 +76,7 @@ In healthy individuals, the visual field can be described with the following ang
 
 As the glaucoma progresses, these angles will decrease. Unfortunately, the damage to the optic nerve in glaucoma is irreversible. Thus, the only treatments now available for glaucoma patients aim at preventing further damage to the optic nerve, but the lost vision cannot be regained.\\
 %
-Elevated IOP is a major risk factor for glaucoma and, in fact, it is the only treatable factor in glaucoma, even though it is neither a necessary nor a sufficient condition for glaucomatous damage. Indeed, a patient could have a glaucoma but low IOP (condition also called normal tension glaucoma), whereas a patient with an elevated IOP (condition also called ocular hypertension) may never develop glaucoma. However, the IOP remains the only parameter we can act on, either by surgery or with medications. 
+\indent Elevated IOP is a major risk factor for glaucoma and, in fact, it is the only treatable factor in glaucoma, even though it is neither a necessary nor a sufficient condition for glaucomatous damage. Indeed, a patient could have a glaucoma but low IOP (condition also called normal tension glaucoma), whereas a patient with an elevated IOP (condition also called ocular hypertension) may never develop glaucoma. However, the IOP remains the only parameter we can act on, either by surgery or with medications. 
 Unfortunately, 25 \% of IOP-treated patient progress to blindness and there is nothing we can do about it with our current knowledge.
 \subsection{IOP-lowering medications}
 \subsubsection{List of medications}
@@ -82,17 +93,17 @@ alpha agonists &  \\
 Carbonic anhydrase inhibitors &  \\
 \hline
 \end{tabular}
-\subsubsection{Different effects on patients}
-Note that certain drugs could work better on patients depending on their age, gender, ethnic group, localization, other diseases like diabetes, hypertension ...There are too many unknown factors to take into account, since each patient reacts differently. 
+\subsubsection{Different effects on patients}\
+\indent Note that certain drugs could work better on patients depending on their age, gender, ethnic group, localization, other diseases like diabetes, hypertension ...There are too many unknown factors to take into account, since each patient reacts differently. 
 Consequently, it is currently very difficult to predict how a specific patient will respond to different IOP-lowering medications, posing serious challenges to the choice of best clinical management of glaucoma patients.\\
 
 Several clinical/statistical studies have already been carried out on these questions and brought interesting results. However, due to the complexity of the system, many of the phenomena regulating the build-up of IOP remain poorly understood. Thus, in this work we contribute to this research field by using a mathematical model to theoretically investigate the influence of different IOP-lowering mechanisms on individuals presenting different systemic conditions.
  
-\section{The model}\label{s3}
-Our aim is to understand the link between IOP, secretion and elimination of aqueous humor and arterial blood pressure.
+\section{The model}\label{s3}\
+\indent Our aim is to understand the link between IOP, secretion and elimination of aqueous humor and arterial blood pressure.
 Because of the lack of data about the geometry and the characteristics of the eye, we chose to present a general model rather than a detailed study of the fluid flow. Such a simple model will be useful to analyze different hypotheses about these processes.
-\subsection{Formulation of the problem}
- The eye is modeled as a shell filled with liquids and containing solid structures. 
+\subsection{Formulation of the problem}\
+\indent The eye is modeled as a shell filled with liquids and containing solid structures. 
  The total aqueous humor volume $U$, 
  the fluid inflow in posterior chamber $F_h$ and
  the net outflow via trabecular path $F_e$ are linked by the simple balance equation:
@@ -202,21 +213,23 @@ F_h=F_e=\displaystyle{\frac{L_p}{R L_p +1}}(p_a-\Delta\pi_{p}-\sigma_{s} \Delta\
 And we have
 %\begin{center}
 %\includegraphics{courbes_pr_fr.png}\\
-%\tiny{source : \textit{Dynamic of the intraocular fluid}Lyobimov et al, 2007}%\end{center}
-%\small{Figure 6: IOP and F_h in the stationary case}
+%\tiny{source :{Dynamic of the intraocular fluid}Lyobimov et al, 2007}\\
+%\small{Figure 6: $IOP$ and $F_h$ in the stationary case}
 %\end{center}
-
 \subsection{Nonstationary case}
 First, a relationship between $V$ and $p$ is needed.\\
 Given the elasticity properties of the eye shell and assuming small pressure deviations from a certain $p_0$, we can linearize $V$.
 \begin{equation}
 V = V(p) \approx V_0 + \alpha (p-p_0)
 \end{equation}
+where $\alpha$ is the volume compliance of the eye shell (note that this value may vary from one patient to another).\\
 The system (\ref{e8}) is replaced by
-\begin{equation}\label{e9}
+\begin{equation}\label{e11}
 \left\{\begin{array}{ll}
  \alpha \displaystyle{\frac{dp}{dt}}=F_{h}-\displaystyle{\frac{p-p_e}{R}}\\
 V^{\ast} \displaystyle{\frac{dC_{2}}{dt}}= F_h(1-\sigma_s)\overline{C} + J - F_hC_2,\; \overline{C}= \frac{C_1+C_2}{2}
 \end{array}\right.
 \end{equation}
+
+
 \end{document}
