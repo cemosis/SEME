@@ -6,6 +6,8 @@ For sake of simplicity we focus on patient arterial pressure. We consider three 
 We take physiological datas from the literature \textcolor{red}{INSERER CITATION Lyubimov et al, 2007,Anders, 1975,The mechanism of aqueous humour
 formation,2002 \cite{??}}, and our initial values in physiological range. As it is a first step to simulation, we decide to neglect here the oscillating component. 
 
+The first simulation we perform is a long time scale simulation. We compute the equation \eqref{e9} and look à at the results for IOP and $C_2$ over time for our three arterial profile patients. The results of this simulation are plotted fig.~\ref{fig:tevolpc2}.
+
 \begin{figure}[htbp]
  \centering
   \subfigure[Time evolution of IOP\label{fig:IOPt}]{
@@ -18,16 +20,19 @@ formation,2002 \cite{??}}, and our initial values in physiological range. As it 
   \caption[text1]{Time evolution of IOP and $C_2$ }
     \label{fig:tevolpc2}
 \end{figure}
-%
+The simulation clearly points the different behaviour regarding the arterial pressure. The IOP seems to decrease widely more for a low $p_a$. This seem to be relevant from a physiological point of view. For more clarity we represented IOP and $C_2$ at a final time as histogram in fig.~\ref{fig:histc2} and~\ref{fig:histIOP}. The histogram visualisation helps us understand the different reactions of IOP and $C_2$ on different $p_a$. Again we can see than HBP patients tend to have a higher $IOP$ but a small low component cnocentration than patients with lower blood pressure.
 \begin{figure}[h]
 \input{images/histC2}
   \caption{$C_2 = f(p_a)$}
+  \label{fig:histc2}
 \end{figure}
 \begin{figure}[h]
 \input{images/histIOP}
   \caption{$IOP = f(p_a)$}
+  \label{fig:histIOP}
 \end{figure}
-\begin{figure}[h]
+
+%\begin{figure}[h]
 %\begin{tabular}{|l|l|l|l|}
 %\hline
 %BP (SBP/DBP)& LBP($100$/$70$)&NBP($120$/$80$) & HBP ($140$/$90$)\\
@@ -36,9 +41,10 @@ formation,2002 \cite{??}}, and our initial values in physiological range. As it 
 %IOP & $9.327$ & $11.632$ & $13.886$\\
 %\hline
 %\end{tabular}
-\caption{table}
-\end{figure}
-\begin{figure}[h]
+%\caption{table}
+%\end{figure}
+We are also interested on studying the impact on such factors as $R$ or $L_p$. This can also be done by computing the equation \eqref{e9} on a relatively long time scale for example. The results of such simulations are listed on table~\ref{table:r} and \ref{table:lp}. These results suggest that decreasing outflow resistance as well as decreasing inflow permeability ensure larger IOP reduction for HBP patients, which seem physiologically relevant. But these simulations also suggest that decreasing inflow permeability has overall larger influence on IOP reduction than decreasing outflow resistance, which is an interesting result.
+\begin{table}[h]
 \begin{tabular}{|l|l|l|l|}
 \hline
 BP (SBP/DBP)& LBP($100$/$70$)&NBP($120$/$80$) & HBP ($140$/$90$)\\
@@ -47,9 +53,9 @@ $p_a$ (mmHg)& $p_a = 26.6$ & $p_a = 31.1$ & $p_a = 35.5$\\
 $\Delta IOP$/$\Delta R $& $0.713$ & $1.022$ & $1.324$\\
 \hline
 \end{tabular}
-\caption{Impact of $R$ on IOP}
-\end{figure}
-\begin{figure}[h]
+\caption{\label{table:r}Impact of $R$ on IOP}
+\end{table}
+\begin{table}[h]
 \begin{tabular}{|l|l|l|l|}
 \hline
 BP (SBP/DBP)& LBP($100$/$70$)&NBP($120$/$80$) & HBP ($140$/$90$)\\
@@ -58,5 +64,6 @@ $p_a$ (mmHg)& $p_a = 26.6$ & $p_a = 31.1$ & $p_a = 35.5$\\
 $\Delta IOP$/$\Delta L_p $& $13.072$ & $18.728$ & $24.261$\\
 \hline
 \end{tabular}
-\caption{Impact of $L_p$ on IOP}
-\end{figure}
+\caption{\label{table:lp}Impact of $L_p$ on IOP}
+\end{table}
+
